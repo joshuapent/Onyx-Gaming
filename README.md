@@ -1,5 +1,8 @@
 Onyx Gaming
 
+Product Description:
+Onyx Gaming is a free-to-use website that offers a vast selection of mini games of various genres, from action to puzzle and strategy. With a simple registration process, users can create an account that grants them access to a plethora of games that can be played directly in their browser. The platform has a modern and sleek design that is easy to navigate, with games neatly categorized by genre and popularity. Onyx Gaming is a perfect destination for gaming enthusiasts who want to explore and try out new games in a single platform
+
 User Story:
 As a gaming enthusiast, I want to explore a variety of mini games of different genres on a single platform, so that I can enjoy my leisure time and try out new games without the hassle of searching for them individually.
 
