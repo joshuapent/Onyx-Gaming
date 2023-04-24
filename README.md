@@ -22,8 +22,7 @@ Frameworks: MongoDB, Express, NodeJS, REACT
 **Lucidchart ERD:**
 
 **WireFrame**
-[logo_720](https://user-images.githubusercontent.com/124005766/234082458-f31c9422-356f-4c76-8d5a-5358bb666bcd.png)
-Frame**
+![logo_720](https://user-images.githubusercontent.com/124005766/234082458-f31c9422-356f-4c76-8d5a-5358bb666bcd.png)
 
 ![auth_page](https://user-images.githubusercontent.com/124005766/234082397-14133bd8-7c84-430c-a06a-e67e199635fa.jpg)
 
