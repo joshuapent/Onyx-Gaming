@@ -20,4 +20,11 @@ Frameworks: MongoDB, Express, NodeJS, REACT
   https://trello.com/b/W88kbmDF/onyx-gaming
 
 **Lucidchart ERD:**
-  https://lucid.app/lucidchart/b43f3960-bfcc-4273-8119-46c7be3b58d7/edit?beaconFlowId=7E5EE0F6D2615CFA&page=0_0&invitationId=inv_6aa1e419-a88f-4f9d-9774-a48680b4e0fd#
+
+**WireFrame**
+[logo_720](https://user-images.githubusercontent.com/124005766/234082458-f31c9422-356f-4c76-8d5a-5358bb666bcd.png)
+Frame**
+
+![auth_page](https://user-images.githubusercontent.com/124005766/234082397-14133bd8-7c84-430c-a06a-e67e199635fa.jpg)
+
+![swipe_page](https://user-images.githubusercontent.com/124005766/234082382-73f0e0c7-5ef6-42e7-9812-12ba45b02c6a.jpg)
