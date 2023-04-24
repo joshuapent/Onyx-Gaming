@@ -1,18 +1,16 @@
 Onyx Gaming
   
 **Product Description:**
-  Onyx Gaming is a free-to-use website that offers a vast selection of mini games of various genres, from action to puzzle and strategy. With a simple registration process, users can create an account that grants them access to a plethora of games that can be played directly in their browser. The platform has a modern and sleek design that is easy to navigate, with games neatly categorized by genre and popularity. Onyx Gaming is a perfect destination for gaming enthusiasts who want to explore and try out new games in a single platform
+  Introducing Onyx Gaming - the ultimate solution for gamers looking to find a compatible gaming teammate! Our innovative platform connects gamers of similar skill levels and playstyles, making it easy to find a teammate who shares your passion for your favorite games.
+  To get started, simply visit the Onyx Gaming website and select the game you want to play. If you don't see your game listed, don't worry - you can easily add it to our database. Then navigate to the find page let us do the work. We'll search our database to help you build the perfect team.
+  We'll display a list of gamer profiles, and when you find someone you like, just click the checkmark to send them a notification. They'll receive your request and have the option to accept or decline. If they accept, the two of you are placed in a chat room where you can get to know eachother a bit before starting your Co-Op journey!
 
 **User Story:**
-  As a gaming enthusiast, I want to explore a variety of mini games of different genres on a single platform, so that I can enjoy my leisure time and try out new games without the hassle of searching for them individually.
-
-  When I visit Onyx Gaming's website, I see a sleek and modern design with a clear call-to-action to create a free account. I click on the button and I am taken to a registration form where I can enter my email, username, and password to create my account.
-
-  Once I have created my account, I am directed to the homepage where I can browse through a wide selection of mini games. I see that the games are neatly categorized by genre, such as action, puzzle, and strategy. I can also see a list of popular games and new releases.
-
-  I decide to start with an action game, so I click on the genre and am taken to a page with a list of action games. I select a game that catches my eye, and the game begins to load in my browser. 
-
-  Throughout my experience with Onyx Gaming, I notice that the website is easy to use and navigate. I appreciate the variety of games available and the fact that I can play them for free with my account.
+  I'm tired of playing solo games! As a gamer, I want a website where I will be able to easily find a gaming teammate of my skill level and playstyle, so that I can have a more enjoyable gaming experience.
+  I open up the Onyx Gaming website and land on a page that asks me what game I wish to play. I also have an option to add a game to the database if I do not see it listed as an option. Once I select the game I want to play, I navigate to the find page and the website searches through its database to find a another gamer seeking a teammate for that same game.
+  The website then begins showing me potential teammates one at a time, with general information about the player. When I find a gamer that I like, I click the checkmark to send a notification to that gamer. They will receive the notification and have the option to accept or decline my request.
+  If the gamer accepts my request, we are matched up and taken to a chat room where we can discuss our expectations before starting the game. We can talk about the game mode, our playing styles, and any other relevant information.
+  Once we are both satisfied, we can start gaming together. Thank you Onyx Gaming.
 
 **Technologies Used:**
 Coding languages: JavaScript, CSS, HTML
