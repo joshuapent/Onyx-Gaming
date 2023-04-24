@@ -6,8 +6,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import { getUser } from '../../utilities/users-service';
 import Home from '../Home/Home';
 import Connect from '../Connect/Connect';
-import Connections from '../Connections/Connections';
 import Account from '../Account/Account';
+import Connections from '../Connections/Connections';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -20,8 +20,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={< Home />}></Route>
               <Route path="/connect" element={< Connect />}></Route>
-              <Route path="/connections" element={< Connections />}></Route>
-              <Route path="/account" element={< Account />}></Route>
+              <Route path="/connections" element={< Connections user={user}/>}></Route>
+              <Route path="/account" element={< Account user={user}/>}></Route>
             </Routes>
           </>
           :
