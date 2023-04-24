@@ -13,9 +13,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/connect">Connect</Link>
       &nbsp; | &nbsp;
-      <Link to="/chat">Chat</Link>
-      &nbsp; | &nbsp;
-      <Link to="/requests">Connection Requests</Link>
+      <Link to="/connections">Connections</Link>
       &nbsp; | &nbsp;
       <Link to="/account">{user && user.name}</Link>
       &nbsp; | &nbsp;
