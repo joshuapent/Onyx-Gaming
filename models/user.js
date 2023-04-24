@@ -13,7 +13,7 @@ const userSchema = new Schema({
     lowercase: true,
     required: true
   },
-  username: {
+  gamertag: {
     type: String,
     required: true
   },
