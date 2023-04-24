@@ -20,7 +20,8 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  connections: [ this ],
 }, {
   timestamps: true,
   toJSON: {
