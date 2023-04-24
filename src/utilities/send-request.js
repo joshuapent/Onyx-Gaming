@@ -4,7 +4,7 @@ export async function sendRequest(url, method = 'GET', payload = null) {
 
     const options = {method}
     if (payload) {
-      options.headers = {"Content=Type": "appl;ication/json"}
+      options.headers = {"Content-Type": "application/json"}
       options.body = JSON.stringify(payload)
     }
   

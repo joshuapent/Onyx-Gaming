@@ -4,6 +4,7 @@ import { signUp } from '../../utilities/users-service';
 export default class SignUpForm extends Component {
   state = {
     name: '',
+    gamertag: '',
     email: '',
     password: '',
     confirm: '',
@@ -20,15 +21,16 @@ export default class SignUpForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      const {name, email, password} = this.state;
-      const formData = {name, email, password};
+      const {name, gamertag, email, password} = this.state;
+      const formData = {name, gamertag, email, password};
       // The promise returned by the signUp service
       // method will resolve to the user object included
       // in the payload of the JSON Web Token (JWT)
       const user = await signUp(formData);
       // Baby step!
       this.props.setUser(user);
-    } catch {
+    } catch (err) {
+      console.log(err)
       // An error occurred
       // Probably due to a duplicate email
       this.setState({ error: 'Sign Up Failed - Try Again' });
@@ -43,6 +45,8 @@ export default class SignUpForm extends Component {
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+            <label>Gamer Tag</label>
+            <input type="text" name="gamertag" value={this.state.gamertag} onChange={this.handleChange} required />
             <label>Email</label>
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
             <label>Password</label>
