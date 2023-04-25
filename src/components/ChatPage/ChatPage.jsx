@@ -46,7 +46,7 @@ function ChatPage({ user }) {
 
   return (
     <div className="ChatPage">
-      <h1>Welcome to the ChatPage</h1>
+      <h1>Chat with (username)</h1>
       <div className="chat-box">
         <ul>
           {msgs.map((data) => {
