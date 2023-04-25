@@ -8,7 +8,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav className='Nav'>
       <Link style={{color:"white"}} to="/">Home</Link>
       &nbsp; | &nbsp;
       <Link style={{color:"white"}} to="/connect">Connect</Link>
