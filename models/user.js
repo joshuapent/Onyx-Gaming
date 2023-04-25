@@ -22,6 +22,10 @@ const userSchema = new Schema({
     required: true
   },
   connections: [ this ],
+  games: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Game'
+  },
 }, {
   timestamps: true,
   toJSON: {
