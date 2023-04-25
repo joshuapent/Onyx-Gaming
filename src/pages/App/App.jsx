@@ -14,6 +14,10 @@ export default function App() {
 
   return (
     <main className="App">
+      <div className='wrapper'>
+        <div className='top-panel'></div>
+        <div className='bottom-panel'></div>
+      </div>
       { user ?
           <>
             <NavBar user= {user} setUser={setUser}/>
