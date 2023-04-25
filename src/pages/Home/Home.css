@@ -3,6 +3,40 @@
     overflow-x: hidden;
 }
 
+.container{
+    position: relative;
+    z-index: 1;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 100vh;   
+}
+
+.content-header{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-header h1{
+    font-size: 120px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: -40px;   
+}
+
+.content-header h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+}
+
+content {
+    width: 200px;
+    height: auto;
+    margin-right: 40px;
+}
+
 .paralax{
     position: absolute;
     height: 100%;
@@ -14,6 +48,42 @@
     height: 100%;
     top: 0;
     left: 0;    
+}
+
+.p-item1{
+    background: url(https://i.imgur.com/rKzICtw.jpeg) center/cover no-repeat;
+
+}
+
+.p-item3{
+    background: url("../../../public/scroll1.png") bottom/100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+
+}
+
+.p-item4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10000%;
+    height: 100%;
+    content: '';
+    background: url("../../../public/fog.png");
+    background-size: contain;
+    background-position: center;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+
+    100%{
+        transform: translate3d(-200vw,0,0);
+    }
 }
 
 .gamericon{
