@@ -59,7 +59,7 @@ function ChatPage({ user }) {
           })}
         </ul>
       </div>
-      <div className="wrapper">
+      <div className="chat-wrapper">
         <form onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={handleChange} />
           <button type="submit">Send</button>

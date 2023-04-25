@@ -1,5 +1,8 @@
 .connections-links {
     color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .connections-link {
