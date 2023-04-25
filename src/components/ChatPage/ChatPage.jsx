@@ -46,7 +46,7 @@ function ChatPage({ user }) {
 
   return (
     <div className="ChatPage">
-      <h1>Welcome to the ChatPage</h1>
+      <h1>Chat with (username)</h1>
       <div className="chat-box">
         <ul>
           {msgs.map((data) => {
@@ -59,7 +59,7 @@ function ChatPage({ user }) {
           })}
         </ul>
       </div>
-      <div className="wrapper">
+      <div className="chat-wrapper">
         <form onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={handleChange} />
           <button type="submit">Send</button>
