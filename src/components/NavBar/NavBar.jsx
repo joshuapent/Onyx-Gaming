@@ -9,15 +9,15 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
+      <Link style={{color:"white"}} to="/">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/connect">Connect</Link>
+      <Link style={{color:"white"}} to="/connect">Connect</Link>
       &nbsp; | &nbsp;
-      <Link to="/connections">Connections</Link>
+      <Link style={{color:"white"}} to="/connections">Connections</Link>
       &nbsp; | &nbsp;
-      <Link to="/account">{user && user.name}</Link>
+      <Link style={{color:"white"}} to="/account">{user && user.name}</Link>
       &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogout}>Log Out</Link>
+      <Link style={{color:"white"}} to="" onClick={handleLogout}>Log Out</Link>
     </nav>
   );
 }
