@@ -21,7 +21,7 @@ export default function Home() {
             <img className="gamericon" style={{marginRight:80}} src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
           </div>
         </div>
-        window.onload = function() {
+         {
           window.addEventListener('scroll', function(e) {
             
             let s = this.scrollY;
