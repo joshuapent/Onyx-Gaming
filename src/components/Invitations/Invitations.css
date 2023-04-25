@@ -1,0 +1,9 @@
+.Invitations {
+    background-color: rgb(255, 248, 225);
+    border-radius: 5px;
+}
+
+.Invitations > h1 {
+    display: flex;
+    justify-content: center;   
+}
