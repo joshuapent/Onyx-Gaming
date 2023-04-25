@@ -2,9 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Invitations.css";
 
 function Invitations({ user }) {
+    const invites = [{name: 'john'}]
+
   return (
     <div className="Invitations">
-      <h1>Welcome to Invitations</h1>
+      <h1>Invitations (number)</h1>
+      <ul>
+          {invites.map((invite) => {
+            return (
+              <li>
+                <span>{invite.name}: </span>
+                <button>Accept</button>
+              </li>
+            );
+          })}
+        </ul>
     </div>
   );
 }
