@@ -5,6 +5,12 @@
     justify-content: center;
 }
 
+.connections > h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 .connections-link {
     color: white;
 }
