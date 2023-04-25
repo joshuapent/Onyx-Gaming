@@ -14,7 +14,7 @@
 .content-header{
     font-family: sans-serif;
     color: white;
-    text-align: center;
+    text-align: center !important;
     text-transform: uppercase;
 }
 
