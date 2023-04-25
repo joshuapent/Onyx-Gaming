@@ -1,4 +1,5 @@
 import "./Home.css";
+import "../../components/NavBar/NavBar"
 
 
 
@@ -17,7 +18,7 @@ export default function Home() {
             <h2>Got Game?</h2>
           </div>
           <div className="content">
-            <img className="gamericon" src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
+            <img className="gamericon" style={{marginRight:80}} src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
           </div>
         </div>
         window.onload = function() {
