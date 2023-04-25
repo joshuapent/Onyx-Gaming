@@ -19,9 +19,9 @@ export default function App() {
             <NavBar user= {user} setUser={setUser}/>
             <Routes>
               <Route path="/" element={< Home />}></Route>
-              <Route path="/connect" element={< Connect />}></Route>
-              <Route path="/connections" element={< Connections user={user}/>}></Route>
-              <Route path="/account" element={< Account user={user}/>}></Route>
+              <Route path="/connect/*" element={< Connect />}></Route>
+              <Route path="/connections/*" element={< Connections user={user}/>}></Route>
+              <Route path="/account/*" element={< Account user={user}/>}></Route>
             </Routes>
           </>
           :
