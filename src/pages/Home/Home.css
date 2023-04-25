@@ -11,6 +11,12 @@
     margin-top: 100vh;
 }
 
+.container .content-header{
+    align-items: center;
+    
+
+}
+
 .content-header{
     font-family: sans-serif;
     color: white;
@@ -35,6 +41,9 @@ content {
     width: 100px;
     height: auto;
     margin-right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .paralax{
@@ -104,5 +113,12 @@ content {
 }
 
 .gamericon{
-    margin-top: 40%;
+    margin-top: 20%;
+    width: 50%;
+    
+}
+
+.content h3{
+    font-size: 20px;
+    padding-left: 20px;
 }

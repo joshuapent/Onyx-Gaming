@@ -18,9 +18,10 @@ export default function Home() {
             <h2>Got Game?</h2>
           </div>
           <div className="content">
-            <img className="gamericon" style={{marginRight:80}} src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
           </div>
+        <img className="gamericon" src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
         </div>
+        <h3>Here We </h3>
          {
           window.addEventListener('scroll', function(e) {
             
