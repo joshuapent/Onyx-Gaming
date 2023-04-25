@@ -14,7 +14,7 @@ export default function Home() {
             <h2>Got Game?</h2>
           </div>
           <div className="content">
-            <img src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
+            <img className="gamericon" src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
           </div>
         </div>
       </div>

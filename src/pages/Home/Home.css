@@ -1,4 +1,21 @@
 .home{
     color: white;
-    text-align: center;
+    overflow-x: hidden;
+}
+
+.paralax{
+    position: absolute;
+    height: 100%;
+}
+
+.paralax-item{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;    
+}
+
+.gamericon{
+    margin-top: 40%;
 }
