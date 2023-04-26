@@ -15,13 +15,6 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [users, setUsers] = useState([]);
 
-  useEffect(function() {
-    async function allUsers() {
-      const users = await getUsers()
-      setUsers(users)
-    }
-    allUsers();
-  }, []);
 
   return (
     <main className="App">
@@ -30,7 +23,7 @@ export default function App() {
             <NavBar user= {user} setUser={setUser}/>
             <Routes>
               <Route path="/" element={< Home />}></Route>
-              <Route path="/connect/*" element={< Connect user={user} users={users}/>}></Route>
+              <Route path="/connect/*" element={< Connect user={user}/>}></Route>
               <Route path="/connections/*" element={< Connections user={user} users={users}/>}></Route>
               <Route path="/account/*" element={< Account user={user}/>}></Route>
             </Routes>

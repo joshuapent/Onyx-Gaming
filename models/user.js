@@ -26,6 +26,12 @@ const userSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Game'
   },
+  rating: {
+    type: Number,
+  },
+  bio: {
+    type: String,   
+  },
 }, {
   timestamps: true,
   toJSON: {
