@@ -151,3 +151,57 @@ content {
     border-bottom-right-radius: 20px;
     z-index: 3;
 }
+
+.gamecards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    margin-bottom: 30%;
+    margin-top: 50%;
+    width: 18rem;
+    height: 32rem;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    z-index: 28;
+    
+    
+
+}
+
+.cod{
+    width:100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.fortnite{
+    width:100%;
+    height: 56.2%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.NBA{
+    width:100%;
+    height: 56.2%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.card-body{
+    color: black;
+}
+
+.card-text{
+    font-size: 13px;
+}
+
+.card:hover{
+    transform: scale(1.5);
+}
+
+.card-btn:hover{
+    
+}
