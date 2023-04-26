@@ -8,5 +8,33 @@
 }
 
 .connect{
-    
+}
+
+.connect-header > h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.connect-card {
+    z-index: 20;
+    border: 1px solid black;
+    background-image: linear-gradient(#2a2727, grey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.connect-card-nameplate, 
+.connect-card-body {
+    border-bottom: 1px solid black;
+}
+
+.connect-card-nameplate, 
+.connect-card-body, 
+.connect-card-footer {
+    display: flex;
+    justify-content: center;
 }
