@@ -33,6 +33,6 @@ export function logOut() {
 }
 
 export async function checkToken() {
-  const dateStr = await usersAPI.checkTOken();
+  const dateStr = await usersAPI.checkToken();
   return new Date(dateStr);
 }
