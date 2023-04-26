@@ -1,5 +1,5 @@
 /* CSS Custom Properties */
-:root {
+/* :root {
   --white: #FFFFFF;
   --tan-1: #0400ff55;
   --tan-2: #0a0095;
@@ -8,7 +8,7 @@
   --orange: #000cf6;
   --text-light: #ffffff;
   --text-dark: #000000;
-}
+} */
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -21,8 +21,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
-  padding: 2vmin;
+  /* background-color: var(--tan-4); */
+  /* padding: 2vmin; */
 }
 
 
