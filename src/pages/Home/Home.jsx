@@ -1,6 +1,6 @@
 import "./Home.css";
 import "../../components/NavBar/NavBar";
-import "../Home/vanilla-tilt"
+import "../Home/vanilla-tilt";
 
 export default function Home() {
   return (
