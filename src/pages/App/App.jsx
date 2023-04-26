@@ -9,8 +9,11 @@ import Connect from '../Connect/Connect';
 import Account from '../Account/Account';
 import Connections from '../Connections/Connections';
 
+
+
 export default function App() {
   const [user, setUser] = useState(getUser());
+
 
   return (
     <main className="App">
@@ -19,7 +22,7 @@ export default function App() {
             <NavBar user= {user} setUser={setUser}/>
             <Routes>
               <Route path="/" element={< Home />}></Route>
-              <Route path="/connect/*" element={< Connect />}></Route>
+              <Route path="/connect/*" element={< Connect user={user}/>}></Route>
               <Route path="/connections/*" element={< Connections user={user}/>}></Route>
               <Route path="/account/*" element={< Account user={user}/>}></Route>
             </Routes>
