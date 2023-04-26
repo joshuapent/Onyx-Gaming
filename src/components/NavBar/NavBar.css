@@ -1,8 +1,9 @@
 .Nav{
-    z-index: 2;
+    z-index: 50;
     position: sticky;
     top: 0;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     padding-left: 2%;
     padding-right: 10%;

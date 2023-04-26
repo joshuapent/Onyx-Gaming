@@ -33,10 +33,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
         <div className="gamecards">
           <div className="card">
             <img
-              className="cod"
+              className="cardimg"
               src="https://i.imgur.com/izMJ3ib.jpeg"
               alt="Card image cap"
               srcset=""
@@ -58,7 +59,7 @@ export default function Home() {
           </div>
           <div className="card">
             <img
-              className="fortnite"
+              className="cardimg"
               src="https://i.imgur.com/PU9EoEz.jpeg"
               alt="Card image cap"
               srcset=""
@@ -77,15 +78,15 @@ export default function Home() {
           </div>
           <div className="card">
             <img
-              className="NBA"
+              className="cardimg"
               src="https://i.imgur.com/7E7JIl8.jpeg"
               alt="Card image cap"
               srcset=""
             />
             <div className="card-body">
-              <h5 className="card-title">Fortnite</h5>
+              <h5 className="card-title">NBA 2K23</h5>
               <p className="card-text">
-              A cooperative shooter-survival game for up to four players to fight off zombie-like husks, defend objects with fortifications you can build, and a battle royale mode where up to 100 players fight to be the last person standing.
+              NBA 2K23 is a 2022 basketball video game developed by Visual Concepts and published by 2K, based on the National Basketball Association. It is the 24th installment in the NBA 2K franchise and is the successor to NBA 2K22
               </p>
               <button>
                 <a href="#" className="card-btn">
@@ -94,8 +95,26 @@ export default function Home() {
               </button>
             </div>
           </div>
+          <div className="card">
+            <img
+              className="cardimg"
+              src="https://i.imgur.com/We8DDeM.png"
+              alt="Card image cap"
+              srcset=""
+            />
+            <div className="card-body">
+              <h5 className="card-title">ADD A GAME</h5>
+              <p className="card-text">
+              Don't see one of your favorite games? Don't worry! Just click the "Add Game" button to add a game to the library.
+              </p>
+              <button>
+                <a href="#" className="card-btn">
+                  Add Game
+                </a>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
 
       {window.addEventListener("scroll", function (e) {
         let s = this.scrollY;

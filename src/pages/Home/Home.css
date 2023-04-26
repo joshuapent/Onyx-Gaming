@@ -9,6 +9,7 @@
     max-width: 1140px;
     margin: 0 auto;
     margin-top: 100vh;
+    margin-bottom: 30%;
 }
 
 .container .content-header{
@@ -154,37 +155,23 @@ content {
 
 .gamecards{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 .card{
     margin-bottom: 30%;
-    margin-top: 50%;
+    margin: 5%;
     width: 18rem;
     height: 32rem;
     background: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
     z-index: 28;
-    
-    
-
 }
 
-.cod{
-    width:100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.fortnite{
-    width:100%;
-    height: 56.2%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.NBA{
+.cardimg{
     width:100%;
     height: 56.2%;
     border-top-right-radius: 20px;
@@ -199,9 +186,6 @@ content {
 }
 
 .card:hover{
-    transform: scale(1.5);
-}
-
-.card-btn:hover{
-    
+    background-color: rgb(183, 255, 0);
+    transform: scale(1.2);
 }
