@@ -26,6 +26,9 @@ const userSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Game'
   },
+  bio: {
+    type: String,   
+  },
 }, {
   timestamps: true,
   toJSON: {
