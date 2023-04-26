@@ -5,6 +5,8 @@ import Invitations from "../../components/Invitations/Invitations";
 
 
 export default function Connections({user}) {  
+  
+
     return (
       <div className="connections">
         <h1>Connections</h1>
