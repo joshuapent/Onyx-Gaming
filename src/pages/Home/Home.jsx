@@ -22,7 +22,7 @@ export default function Home() {
             <img className="gamericon" src="https://i.imgur.com/e6gOX8t.png" alt="GamerCentral" srcset="" />
             <div className="content-txt">
               <h1>It's Quick and Easy!</h1>
-              <h3>It's quick and easy! select one of the games from the dropdown to add it to your profile. You can then navigate to the "connect" page where you can browse through gamers with the same games looking to team-up </h3>
+              <h3>Select one of the games from the dropdown to add it to your profile. You can then navigate to the "connect" page where you can browse through gamers with the same games looking to team-up </h3>
             </div>
             </div>
           </div>
