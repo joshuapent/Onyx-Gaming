@@ -1,5 +1,6 @@
 import "./Home.css";
 import "../../components/NavBar/NavBar";
+import "../Home/vanilla-tilt"
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
         </div>
       </div>
         <div className="gamecards">
-          <div className="card">
+          <div className="card" data-tilt>
             <img
               className="cardimg"
               src="https://i.imgur.com/izMJ3ib.jpeg"
@@ -57,7 +58,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="card">
+          <div className="card" data-tilt>
             <img
               className="cardimg"
               src="https://i.imgur.com/PU9EoEz.jpeg"
@@ -76,7 +77,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="card">
+          <div className="card" data-tilt>
             <img
               className="cardimg"
               src="https://i.imgur.com/7E7JIl8.jpeg"
@@ -95,7 +96,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="card">
+          <div className="card" data-tilt>
             <img
               className="cardimg"
               src="https://i.imgur.com/We8DDeM.png"
@@ -113,7 +114,7 @@ export default function Home() {
                 </a>
               </button>
             </div>
-          </div>
+          </div><script type="text/javascript" src="vanilla-tilt.js"></script>
         </div>
 
       {window.addEventListener("scroll", function (e) {
@@ -143,6 +144,7 @@ export default function Home() {
           "p-item3"
         )[0].style = `transform: translate3d(${hr_2}px,0,0) scale(${z_4})`;
       })}
+      
     </div>
   );
 }
