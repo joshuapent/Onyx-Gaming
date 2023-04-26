@@ -7,6 +7,7 @@ module.exports = {
   create,
   login,
   checkToken,
+  allUsers,
 };
 
 async function checkToken(req, res) {
@@ -39,10 +40,22 @@ async function login(req, res) {
 }
 
 
+
 function createJWT(user) {
   return jwt.sign(
     { user },
     process.env.SECRET,
     { expiresIn: '24h' }
-  );
+    );
+  }
+
+async function allUsers(req, res) {
+  try {
+    const users = await User.find() 
+    console.log(users)
+    res.json(users)
+  } catch (err) {
+    console.log(err)
+    res.status(400).json(err);
+  }
 }
