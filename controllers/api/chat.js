@@ -1,7 +1,7 @@
 const Chat = require('../../models/chat');
 const User = require('../../models/user');
 
-async function findAllChat(req, res) {
+async function findAllChats(req, res) {
     try {
       const chat = await Chat.find();
       res.json(chat);
@@ -41,5 +41,6 @@ async function disconnectUsers(req, res) {
 module.exports = {
     connectUsers,
     disconnectUsers,
-    findChat
+    findAllChats,
+    findMyChats,
   };
