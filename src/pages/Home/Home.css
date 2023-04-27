@@ -181,11 +181,16 @@ content {
     color: black;
 }
 
+.card-title{
+    font-size: large;
+    margin-bottom: 0;
+}
+
 .card-text{
     font-size: 13px;
 }
 
 .card:hover{
-    background-color: rgb(183, 255, 0);
+    background-color: rgb(249, 170, 0);
     transform: scale(1.2);
 }
