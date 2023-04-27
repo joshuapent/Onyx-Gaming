@@ -212,7 +212,7 @@ content {
     opacity: 1;    
 }
 
-.wrapper{
+.wrapper1{
     margin: 70px auto;
     padding: 20px;
     background: #e7e7e7;
@@ -222,13 +222,13 @@ content {
     transition: all 5s ease-in-out;     
 }
 
-.wrapper h2{
+.wrapper1 h2{
     margin-top: 0;
     color: #333;   
 }
 
-.wrapper .close{
-    position: absolute;
+.wrapper1 .close{
+    /* position: absolute; */
     top: 20px;
     right: 30px;
     transition: all 200ms;
@@ -238,8 +238,8 @@ content {
     color: #333;
 }
 
-.wrapper .content1{
-    max-height: 30%;
+.wrapper1 .content1{
+    max-height: 100%;
     overflow: auto;  
 }
 
