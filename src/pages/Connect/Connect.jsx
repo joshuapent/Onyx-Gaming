@@ -6,7 +6,8 @@ import { useState, useEffect } from 'react';
 
 export default function Connect({user}) {  
 
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(getUsers);
+  const [idx, setIdx] = useState(0);
 
   useEffect(function() {
     async function allUsers() {
@@ -16,21 +17,20 @@ export default function Connect({user}) {
     allUsers();
   }, []);
 
-  
+  function handleIdxChange() {
+    setIdx(idx + 1)
+    return idx
+  }
+
 
   return (
     <div className="connect">
       <div className="connect-header">
         <h1>Connect</h1>
       </div>
-      {console.log(users)}
-      {console.log(user)}
-      {users.map((user, idx) => (
-        <div className="connect-card">
-          <ConnectCard user={user} index={idx}/>
-        </div>
-      ))}
-
+      <div className="connect-card">
+        <ConnectCard users={users} idx={idx} handleIdxChange={handleIdxChange}/>
+      </div>
       <div className='wrapper'>
       <div className='top-panel'></div>
       <div className='bottom-panel'></div>
