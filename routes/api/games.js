@@ -13,6 +13,7 @@ router.get('/:id', (req, res) => {
 
 // Post a new game
 router.post('/', (req, res) => {
+    
     res.json({mssg: 'Post a new game'})
 })
 
