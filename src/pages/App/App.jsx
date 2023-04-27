@@ -14,6 +14,7 @@ import { getUsers } from '../../utilities/users-api';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [users, setUsers] = useState([]);
+  const [chat, setChat] = useState([])
 
 
   return (
