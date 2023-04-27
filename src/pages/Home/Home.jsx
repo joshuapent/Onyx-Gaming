@@ -103,11 +103,28 @@ export default function Home() {
               <p className="card-text">
               Don't see one of your favorite games? Don't worry! Just click the "Add Game" button to add a game to the library.
               </p>
-              <button>
-                <a href="#" className="card-btn">
-                  Add Game
-                </a>
-              </button>
+              <div>
+                <a href="#divOne" className="button">Add Game</a>
+              </div>
+              <div className="overlay" id="divOne">
+                <div className="wrapper1">
+                  <h2>Please fill out game info</h2>
+                  <a href="#" className="close">&times;</a>
+                  <div className="content1">
+                    <div className="container1">
+                      <form>
+                        <label>Game Name</label>
+                        <input type="text" placeholder="Name of game" />
+                        <label>Image URL</label>
+                        <input type="text" placeholder="Please insert image URL" />
+                        <label>Description</label>
+                        <textarea placeholder="Your Query Here..."></textarea>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div><script type="text/javascript" src="vanilla-tilt.js"></script>
         </div>
