@@ -129,7 +129,7 @@ content {
     /* padding-top: 40%; */
     margin-top: 30%;
     width: 800px;
-    height: 400px;
+    height: 250px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -190,10 +190,27 @@ content {
     font-size: 13px;
 }
 
+.card-texts{
+    font-size: 13px;
+    margin-bottom: 10%;
+}
+
 .card:hover{
     background-color: rgb(249, 170, 0);
     transform: scale(1.2);
 }
+.card1{
+    margin-bottom: 30%;
+    margin: 5%;
+    width: 18rem;
+    height: 32rem;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    z-index: 28;
+}
+
+
 
 .overlay{
     position: fixed;
@@ -228,7 +245,7 @@ content {
 }
 
 .wrapper1 .close{
-    /* position: absolute; */
+    position: absolute;
     top: 20px;
     right: 30px;
     transition: all 200ms;
@@ -263,7 +280,7 @@ input[type=text], textarea{
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical;     
+    /* resize: vertical;      */
 }
 
 input[type="submit"]{
@@ -276,4 +293,32 @@ input[type="submit"]{
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.card-btn{
+    background-color: #413b3b;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    
+}
+
+.button1{
+    background-color: #413b3b;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    
 }

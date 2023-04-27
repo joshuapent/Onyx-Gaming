@@ -26,7 +26,7 @@ export default function Home() {
             <div className="content-txt">
               <h1>It's Quick and Easy!</h1>
               <h3>
-                Select one of the games from the dropdown to add it to your
+                Choose one of the games from the collection below and add it to your
                 profile. You can then navigate to the "connect" page where you
                 can browse through gamers with the same games looking to team-up{" "}
               </h3>
@@ -92,7 +92,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="card" data-tilt>
+          <div className="card1" data-tilt>
             <img
               className="cardimg"
               src="https://i.imgur.com/We8DDeM.png"
@@ -100,11 +100,11 @@ export default function Home() {
             />
             <div className="card-body">
               <h5 className="card-title">ADD A GAME</h5>
-              <p className="card-text">
+              <p className="card-texts">
               Don't see one of your favorite games? Don't worry! Just click the "Add Game" button to add a game to the library.
               </p>
               <div>
-                <a href="#divOne" className="button">Add Game</a>
+                <a href="#divOne" className="button1">Add Game</a>
               </div>
               <div className="overlay" id="divOne">
                 <div className="wrapper1">
@@ -126,7 +126,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div><script type="text/javascript" src="vanilla-tilt.js"></script>
+          </div>
+          <script type="text/javascript" src="vanilla-tilt.js"></script>
         </div>
 
       {window.addEventListener("scroll", function (e) {
