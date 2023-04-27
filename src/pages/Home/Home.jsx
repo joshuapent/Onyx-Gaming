@@ -22,7 +22,6 @@ export default function Home() {
               className="gamericon"
               src="https://i.imgur.com/e6gOX8t.png"
               alt="GamerCentral"
-              srcset=""
             />
             <div className="content-txt">
               <h1>It's Quick and Easy!</h1>
@@ -41,7 +40,6 @@ export default function Home() {
               className="cardimg"
               src="https://i.imgur.com/izMJ3ib.jpeg"
               alt="Card image cap"
-              srcset=""
             />
             <div className="card-body">
               <h5 className="card-title">Call of Duty: Modern Warfare 2</h5>
@@ -63,7 +61,6 @@ export default function Home() {
               className="cardimg"
               src="https://i.imgur.com/PU9EoEz.jpeg"
               alt="Card image cap"
-              srcset=""
             />
             <div className="card-body">
               <h5 className="card-title">Fortnite</h5>
@@ -82,7 +79,6 @@ export default function Home() {
               className="cardimg"
               src="https://i.imgur.com/7E7JIl8.jpeg"
               alt="Card image cap"
-              srcset=""
             />
             <div className="card-body">
               <h5 className="card-title">NBA 2K23</h5>
@@ -101,7 +97,6 @@ export default function Home() {
               className="cardimg"
               src="https://i.imgur.com/We8DDeM.png"
               alt="Card image cap"
-              srcset=""
             />
             <div className="card-body">
               <h5 className="card-title">ADD A GAME</h5>
