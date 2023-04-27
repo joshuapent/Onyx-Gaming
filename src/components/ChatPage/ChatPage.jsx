@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
-import "./ChatPage.css";
 
-function ChatPage({ user }) {
+function ChatPage({ user, handleChat}) {
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([]);
 
@@ -46,7 +45,7 @@ function ChatPage({ user }) {
 
   return (
     <div className="ChatPage">
-      <h1>Chat with (username)</h1>
+      <h1>Chat with (username)</h1> <button onClick={handleChat}>Exit Chat</button>
       <div className="chat-box">
         <ul>
           {msgs.map((data) => {
