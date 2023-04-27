@@ -10,7 +10,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className='Nav'>
-      <img className='onyxlogo' src="../../../Logo.png" alt="" srcset="" />
+      <img className='onyxlogo' src="../../../Logo.png" alt=""/>
       <ul>
         <li><Link style={{color:"white"}} to="/">Home</Link></li>
         <li><Link style={{color:"white"}} to="/connect">Connect</Link></li>
