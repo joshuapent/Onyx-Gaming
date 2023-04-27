@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const chatCtrl = require('../../controllers/api/users');
+const chatCtrl = require('../../controllers/api/chat');
 
 router.post('/create', chatCtrl.connectUsers)
 router.post('/delete', chatCtrl.disconnectUsers)
