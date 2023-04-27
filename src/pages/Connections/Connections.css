@@ -14,3 +14,29 @@
 .connections-link {
     color: white;
 }
+
+.ChatPage {
+    background-color: rgb(255, 248, 225);
+    border-radius: 5px;
+}
+
+.ChatPage > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-wrapper {
+    display: flex;
+}
+
+.chat-wrapper > form > input {
+    width: auto;
+}
+
+.chat-box > ul > li {
+    list-style: none;
+}
+
+.chat-box > ul {
+    padding-left: 1em;
+}
