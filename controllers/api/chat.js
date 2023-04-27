@@ -21,7 +21,9 @@ async function findMyChats(req, res) {
 
 async function connectUsers(req, res) {
     try {
-      const chat = await Chat.create(req.body);
+      console.log('req.body is', req.body)
+      const chatObj = {users: [req.body.users[0]._id, req.body.users[1]._id]}
+      const chat = await Chat.create(chatObj);
       res.json(chat);
     } catch (err) {
       res.status(400).json(err);

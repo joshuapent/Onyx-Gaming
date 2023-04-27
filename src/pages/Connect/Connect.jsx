@@ -29,7 +29,7 @@ export default function Connect({user}) {
         <h1>Connect</h1>
       </div>
       <div className="connect-card">
-        <ConnectCard users={users} idx={idx} handleIdxChange={handleIdxChange}/>
+        <ConnectCard users={users} idx={idx} handleIdxChange={handleIdxChange} user={user}/>
       </div>
       <div className='wrapper'>
       <div className='top-panel'></div>
