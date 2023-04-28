@@ -41,10 +41,6 @@ function ChatPage({ user, handleChat, chatID}) {
     }
     const socket = socketRef.current;
 
-    // socketRef.current.auth = {
-    //   token: localStorage.getItem("token"),
-    // };
-
     socket.connect();
 
     socket.on("newMsg", (msg) => {
@@ -57,10 +53,6 @@ function ChatPage({ user, handleChat, chatID}) {
     };
   }, []);
 
-  function handleChange(e) {
-    setInput(e.target.value);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
     const data = { msg: input, user: user.name };
@@ -69,6 +61,9 @@ function ChatPage({ user, handleChat, chatID}) {
     setInput("");
   }
 
+  function handleChange(e) {
+    setInput(e.target.value);
+  }
   return (
     <div className="ChatPage">
       <h1>Chat with {friend && friend.name}</h1> <button onClick={handleChat}>Exit Chat</button>

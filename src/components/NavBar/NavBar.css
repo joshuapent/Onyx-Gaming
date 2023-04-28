@@ -7,13 +7,13 @@
     align-items: center;
     padding-left: 2%;
     padding-right: 10%;
-    background: rgb(6, 6, 6);
+    background: rgba(6, 6, 6, 0.604);
     width: 100VW;
     justify-content: space-between;
 }
 
 .onyxlogo{
-    width: 5%;
+    width: 3%;
     height: auto;
 }
 

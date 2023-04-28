@@ -37,6 +37,7 @@ io.on('connection', (socket) => {
   })
 
   socket.on('newMsg', (msg) => {
-    socket.broadcast.emit('')
+    socket.broadcast.emit("sendMsg", msg)
   })
+
 });
