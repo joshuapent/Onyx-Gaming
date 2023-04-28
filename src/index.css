@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
-  padding: 2vmin;
+  /* padding: 2vmin; */
 }
 
 button, a.button {
@@ -120,7 +120,7 @@ button, a.button {
   align-items: center;
   width: 100%;
   height: 100%;
-  background: #39007b;
+  background: #141414;
 }
 
 .authlbl{
@@ -143,12 +143,18 @@ button, a.button {
   max-width: 400px;
   max-height: 30px;
   background: transparent;
+  border: none;
+  letter-spacing: 0.05em;
+  font-size: 1em;
 }
 
 .authinputpw{
   width: 400px;
   height: 30px;
   background: transparent;
+ 
+  letter-spacing: 0.05em;
+  font-size: 1em;
 }
 
 .authform{
