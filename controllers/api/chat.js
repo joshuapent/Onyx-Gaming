@@ -12,7 +12,7 @@ async function findAllChats(req, res) {
 
 async function findMyChats(req, res) {
     try {
-        const chat = await Chat.find().populate('users').exec();
+        const chat = await Chat.find({users: req.params.id}).populate('users').exec();
         res.json(chat);
       } catch (err) {
         res.status(400).json(err);
