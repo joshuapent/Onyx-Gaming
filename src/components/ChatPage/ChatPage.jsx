@@ -5,7 +5,9 @@ import { aChat } from "../../utilities/chat-api";
 function ChatPage({ user, handleChat, chatID}) {
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([]);
-  const [chatRoom, setchatRoom] = useState();
+  const [chatRoom, setchatRoom] = useState(null);
+
+  console.log(chatRoom)
 
   useEffect(() => {
     async function setRoom() {
@@ -13,7 +15,7 @@ function ChatPage({ user, handleChat, chatID}) {
       setchatRoom(newRoom)
     }
     setRoom()
-  }, [])
+  }, [chatID])
 
   const socketRef = useRef();
 
@@ -55,13 +57,12 @@ function ChatPage({ user, handleChat, chatID}) {
 
   return (
     <div className="ChatPage">
-      {console.log('its working', chatRoom)}
       <h1>Chat with (username)</h1> <button onClick={handleChat}>Exit Chat</button>
       <div className="chat-box">
-        <ul>
-          {msgs.map((data) => {
+        <ul className="chat-items">
+          {msgs.map((data, idx) => {
             return (
-              <li>
+              <li className={data.user} key={data + idx}>
                 <span>{data.user}: </span>
                 {data.msg}
               </li>

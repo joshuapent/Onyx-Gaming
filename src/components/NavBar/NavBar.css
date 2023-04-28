@@ -17,18 +17,18 @@
     height: auto;
 }
 
-ul li {
+.navLi {
     display: inline-block;
     list-style-type: none;
 }
 
-ul li:hover{
+.navLi:hover{
     transform: scale(1.5);
     color: #560090;
 }
 
 
-ul li a{
+.navLi a{
     padding: 0px 55px;
     /* color: #FFF; */
     text-decoration: none;

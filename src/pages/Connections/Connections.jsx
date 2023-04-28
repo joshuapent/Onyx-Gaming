@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './Connections.css';
 import Invitations from "../../components/Invitations/Invitations";
 import ChatListPage from "../../components/ChatListPage/ChatListPage";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { myChats } from "../../utilities/chat-api";
 
 export default function Connections({user}) {  
@@ -27,7 +27,7 @@ export default function Connections({user}) {
         setChats(chats)
       }
       effectFunction()
-    }, []);
+    }, [user._id]);
 
 
     console.log('chats', chats)

@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-
-
-function ChatListPage({ chats, user, handleChat}) {
+ function ChatListPage({ chats, user, handleChat}) {
   return (
     <div className="user-chat">
         {chats &&

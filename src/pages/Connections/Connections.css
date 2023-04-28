@@ -35,6 +35,7 @@
 
 .chat-box > ul > li {
     list-style: none;
+    display: flex;
 }
 
 .chat-box > ul {
