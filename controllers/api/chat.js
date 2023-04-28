@@ -12,11 +12,20 @@ async function findAllChats(req, res) {
 
 async function findMyChats(req, res) {
     try {
-        const chat = await Chat.find().populate('users').exec();
+        const chat = await Chat.find({users: req.params.id}).populate('users').exec();
         res.json(chat);
       } catch (err) {
         res.status(400).json(err);
       }
+}
+
+async function findAChat(req, res) {
+    try {
+        const specificChat = await Chat.findById(req.params.id)
+        res.json(specificChat)
+    } catch (err) {
+        res.status(400).json(err);
+    }
 }
 
 async function connectUsers(req, res) {
@@ -45,4 +54,5 @@ module.exports = {
     disconnectUsers,
     findAllChats,
     findMyChats,
+    findAChat,
   };

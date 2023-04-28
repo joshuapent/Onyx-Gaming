@@ -13,18 +13,17 @@ export default function Connections({user}) {
 
     const [chatID, setChatID] = useState(null);
 
-    function handleChat(evt) {
+    function handleChat(chatID) {
       chatOpen ?
         setChatOpen(false)
         :
         setChatOpen(true)
-        setChatID(evt.target.value)
-        console.log('this', evt.target)
+        setChatID(chatID)
     }
 
     useEffect(function() {
       async function effectFunction() {
-        const chats = await myChats()
+        const chats = await myChats(user._id)
         setChats(chats)
       }
       effectFunction()
