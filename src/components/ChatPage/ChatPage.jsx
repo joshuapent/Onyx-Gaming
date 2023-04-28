@@ -1,21 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 import { aChat } from "../../utilities/chat-api";
+import { getUser } from "../../utilities/users-api";
 
 function ChatPage({ user, handleChat, chatID}) {
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([]);
   const [chatRoom, setchatRoom] = useState(null);
-
-  console.log(chatRoom)
+  const [friend, setFriend] = useState(null);
 
   useEffect(() => {
     async function setRoom() {
       const newRoom = await aChat(chatID)
       setchatRoom(newRoom)
+      // const chatUsers = await findUsers(newRoom.users)
     }
     setRoom()
   }, [chatID])
+
+  useEffect(() => {
+    async function chatUsers() {
+      if (chatRoom.users[0] !== user._id) {
+        const friend = await getUser(chatRoom.users[0])
+        setFriend(friend)
+      } else {
+        const friend = await getUser(chatRoom.users[1])
+        setFriend(friend)
+      }
+    }
+    chatRoom && chatUsers()
+  }, [chatRoom])
 
   const socketRef = useRef();
 
@@ -57,7 +71,7 @@ function ChatPage({ user, handleChat, chatID}) {
 
   return (
     <div className="ChatPage">
-      <h1>Chat with (username)</h1> <button onClick={handleChat}>Exit Chat</button>
+      <h1>Chat with {friend && friend.name}</h1> <button onClick={handleChat}>Exit Chat</button>
       <div className="chat-box">
         <ul className="chat-items">
           {msgs.map((data, idx) => {

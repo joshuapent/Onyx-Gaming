@@ -29,8 +29,6 @@ export default function Connections({user}) {
       effectFunction()
     }, [user._id]);
 
-
-    console.log('chats', chats)
     return (
       <div className="connections">
         <h1>Connections</h1>

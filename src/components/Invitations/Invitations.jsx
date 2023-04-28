@@ -7,9 +7,9 @@ function Invitations({ user }) {
     <div className="Invitations">
       <h1>Invitations (number)</h1>
       <ul>
-          {invites.map((invite) => {
+          {invites.map((invite, idx) => {
             return (
-              <li>
+              <li key={invite + idx}>
                 <span>{invite.name}: </span>
                 <button>Accept</button>
               </li>
