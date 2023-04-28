@@ -9,7 +9,18 @@ export default function AuthPage({setUser}) {
     <main className='auth'>
       <video className='videobg' src={flo} autoPlay loop muted />
       <div className='authstuff'>
-      <h1>Onyx Gaming</h1>
+      <div className='titletext'>
+        <span>O</span>
+        <span>N</span>
+        <span>Y</span>
+        <span>X</span>
+        <span>G</span>
+        <span>A</span>
+        <span>M</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+      </div>
       <div>
       <SignUpForm setUser={setUser}/>
       </div>
