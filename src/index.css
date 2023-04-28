@@ -113,14 +113,18 @@ button, a.button {
 }
 
 .auth{
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #39007b;
 }
 
 .authlbl{
-  color: white;
+  color: #45f3ff;
 }
 
 .signup{
@@ -138,11 +142,13 @@ button, a.button {
 .authinput{
   max-width: 400px;
   max-height: 30px;
+  background: transparent;
 }
 
 .authinputpw{
   width: 400px;
-  height: 30px
+  height: 30px;
+  background: transparent;
 }
 
 .authform{
