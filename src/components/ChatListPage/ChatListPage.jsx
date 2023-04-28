@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
+
 function ChatListPage({ chats, user, handleChat}) {
   return (
     <div className="user-chat">
@@ -16,7 +17,9 @@ function ChatListPage({ chats, user, handleChat}) {
                             })
                             }
                         </div>
-                        <button onClick={handleChat}>Chat</button>
+                        <form onSubmit={handleChat} value={chat._id}>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
                 )
             })
