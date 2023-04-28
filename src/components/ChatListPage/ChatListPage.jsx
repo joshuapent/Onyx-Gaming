@@ -1,11 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function ChatListPage({ user, handleChat}) {
-
-
+function ChatListPage({ chats, user, handleChat}) {
   return (
     <div className="user-chat">
-        <button onClick={handleChat}>Chat</button>
+        {chats && console.log(chats[1].users)}
+        {chats &&
+            chats.map((chat) => {
+                return (
+                    <div className="individual-chat">
+                        <div className="chat-users">
+                            {chat.users.map((user) => {
+                                return (
+                                    <h1>{user.name}</h1>
+                                )
+                            })
+                            }
+                        </div>
+                        <button onClick={handleChat}>Chat</button>
+                    </div>
+                )
+            })
+        }
     </div>
   );
 }
