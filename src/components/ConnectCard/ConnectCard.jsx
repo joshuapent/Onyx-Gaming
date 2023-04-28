@@ -37,6 +37,7 @@ function ConnectCard({users, handleIdxChange, idx, user}) {
                     <p>This user has not yet set up a bio</p>
             }           </div>
         <div className="connect-card-footer">
+            <div className="stats">
             {userView && userView.games ? 
                 <h3>Games: {userView.games}</h3> : 
                 <h3>Games: N/A</h3>
@@ -46,8 +47,11 @@ function ConnectCard({users, handleIdxChange, idx, user}) {
                 <h3>Rating: {userView && userView.rating}</h3> :
                 <h3>Rating: N/A</h3>
             }
-            <button onClick={callFunctions}>Connect!</button>
-            <button onClick={handleIdxChange}>Not Interested</button>
+            </div>
+            <div className="choice">
+                <button onClick={handleIdxChange}>Not Interested</button>
+                <button onClick={callFunctions}>Connect!</button>
+            </div>
         </div>
     </>
   );
