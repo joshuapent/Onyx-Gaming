@@ -1,12 +1,13 @@
 import "./Home.css";
 import "../../components/NavBar/NavBar";
 import "../Home/vanilla-tilt";
+import space from '../../assets/TEST.mp4'
 
 export default function Home() {
   return (
     <div className="home">
       <div className="paralax">
-        <div className="paralax-item p-item1"></div>
+        <div className="paralax-item p-item1"><video className='videobg' src={space} autoPlay loop muted /></div>
         <div className="paralax-item p-item2"></div>
         <div className="paralax-item p-item3"></div>
         <div className="paralax-item p-item4"></div>
@@ -20,7 +21,7 @@ export default function Home() {
           <div className="imgdiv">
             <img
               className="gamericon"
-              src="https://i.imgur.com/e6gOX8t.png"
+              src="https://i.imgur.com/M6afphl.png"
               alt="GamerCentral"
             />
             <div className="content-txt">
