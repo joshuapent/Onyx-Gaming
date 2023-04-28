@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Account.css';
+import { connectUsers } from "../../utilities/chat-api";
 
 function Account({user}) {
 

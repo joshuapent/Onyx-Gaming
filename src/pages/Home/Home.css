@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 .home{
     color: white;
     overflow-x: hidden;
@@ -19,22 +20,25 @@
 }
 
 .content-header{
-    font-family: sans-serif;
     color: white;
     text-align: center !important;
     text-transform: uppercase;
 }
 
 .content-header h1{
-    font-size: 120px;
-    font-weight: 600;
+    font-size: 150px;
+    font-weight: 500;
+    font-family: 'Black Ops One';
     color: white;
-    margin-bottom: -40px;   
+    margin-bottom: -40px;
+    text-shadow: 0 0 12px rgb(0, 0, 0), 0 0 20px rgb(0, 191, 255), 0 0 100px purple, 0 0 50px rgb(0, 187, 255);
+    
 }
 
 .content-header h2{
     font-size: 40px;
     font-weight: 500;
+    font-family: 'Black Ops One';
     color: white;
 }
 

@@ -51,7 +51,7 @@ function ConnectCard({users, handleIdxChange, idx, user}) {
             }
             </div>
             <div className="choice">
-                <button onClick={handleIdxChange}><NotInterestedIcon color="error" fontSize="large"/>
+                <button className="ex" onClick={handleIdxChange}><NotInterestedIcon color="error" fontSize="large"/>
                 <br /><span className="connecttxt">Not Interested</span></button>
                 <button className="check" onClick={callFunctions}><CheckCircleIcon color="success" fontSize="large"/>
                 <br /><span className="connecttxt">Connect</span></button>
