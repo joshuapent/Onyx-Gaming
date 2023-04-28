@@ -5,6 +5,10 @@ export async function myChats() {
     return sendRequest(`${BASE_URL}/myChats`)
 }
 
+export async function aChat(chatRoom) {
+    return sendRequest(`${BASE_URL}/aChat/${chatRoom}`)
+}
+
 export async function connectUsers(userData) {
     return sendRequest(`${BASE_URL}/create`, "POST", userData);
 }

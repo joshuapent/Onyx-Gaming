@@ -19,6 +19,15 @@ async function findMyChats(req, res) {
       }
 }
 
+async function findAChat(req, res) {
+    try {
+        const specificChat = await Chat.findById(req.params.id)
+        res.json(specificChat)
+    } catch (err) {
+        res.status(400).json(err);
+    }
+}
+
 async function connectUsers(req, res) {
     try {
       console.log('req.body is', req.body)
@@ -45,4 +54,5 @@ module.exports = {
     disconnectUsers,
     findAllChats,
     findMyChats,
+    findAChat,
   };

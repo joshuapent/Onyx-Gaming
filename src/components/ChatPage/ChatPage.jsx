@@ -1,9 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
+import { aChat } from "../../utilities/chat-api";
 
-function ChatPage({ user, handleChat}) {
+function ChatPage({ user, handleChat, chatID}) {
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([]);
+  const [chatRoom, setchatRoom] = useState();
+
+  useEffect(() => {
+    async function setRoom() {
+      const newRoom = await aChat(chatID)
+      setchatRoom(newRoom)
+    }
+    setRoom()
+  }, [])
 
   const socketRef = useRef();
 
@@ -45,6 +55,7 @@ function ChatPage({ user, handleChat}) {
 
   return (
     <div className="ChatPage">
+      {console.log('its working', chatRoom)}
       <h1>Chat with (username)</h1> <button onClick={handleChat}>Exit Chat</button>
       <div className="chat-box">
         <ul>
