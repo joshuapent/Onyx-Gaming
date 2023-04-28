@@ -25,19 +25,15 @@ import './Account.css';
 //   </div>
 // }
 
-function Account(props) {
-  const { kdRatio, favoriteGames, profilePicture, gamerTag, personalBio } = props;
+function Account(user) {
 
   return (
     <div className="profile-page">
-      <div className="profile-picture">
-        <img src={profilePicture} alt="Profile Picture" className="profile-picture" />
-      </div>
-      <h1 className="gamer-tag">{gamerTag}</h1>
+      <h1 className="gamer-tag"></h1>
       <div className="profile-details">
-        <p><strong>K/D Ratio:</strong> {kdRatio}</p>
-        <p><strong>Favorite Games:</strong> {favoriteGames}</p>
-        <p><strong>Personal Bio:</strong> {personalBio}</p>
+        <p><strong>K/D Ratio:</strong></p>
+        <p><strong>Favorite Games:</strong></p>
+        <p><strong>Personal Bio:</strong> </p>
       </div>
       <button className="update-profile-btn">Update</button>      
     </div>

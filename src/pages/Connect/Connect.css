@@ -62,4 +62,15 @@
     display: flex;
     justify-content: center;
     /* margin-top: 70%; */
+    /* justify-content: space-between; */
+    width: 100%;
+
+}
+
+.check{
+    margin: 10;   
+}
+
+.connecttxt{
+    font-size: small;
 }
