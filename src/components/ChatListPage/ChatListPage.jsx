@@ -4,22 +4,19 @@ import React, { useState, useEffect, useRef } from "react";
 function ChatListPage({ chats, user, handleChat}) {
   return (
     <div className="user-chat">
-        {chats && console.log(chats[1].users)}
         {chats &&
-            chats.map((chat) => {
+            chats.map((chat, idx) => {
                 return (
-                    <div className="individual-chat">
+                    <div key={chat + idx} className="individual-chat">
                         <div className="chat-users">
-                            {chat.users.map((user) => {
+                            {chat.users.map((user, idx) => {
                                 return (
-                                    <h1>{user.name}</h1>
+                                    <h1 key={user + idx}>{user.name}</h1>
                                 )
                             })
                             }
                         </div>
-                        <form onSubmit={handleChat} value={chat._id}>
-                            <button type="submit">Send</button>
-                        </form>
+                        <button onClick={() => handleChat(chat._id)}>Open</button>
                     </div>
                 )
             })

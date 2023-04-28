@@ -6,6 +6,7 @@ router.post('/create', chatCtrl.connectUsers)
 router.post('/delete', chatCtrl.disconnectUsers)
 router.get('/all', chatCtrl.findAllChats)
 router.get('/myChats', chatCtrl.findMyChats)
+router.get('/aChat/:id', chatCtrl.findAChat)
 
 // router.post('/', usersCtrl.create);
 // router.post('/login', usersCtrl.login);
