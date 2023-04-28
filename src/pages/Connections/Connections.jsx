@@ -11,11 +11,15 @@ export default function Connections({user}) {
 
     const [chats, setChats] = useState(null);
 
-    function handleChat() {
+    const [chatID, setChatID] = useState(null);
+
+    function handleChat(evt) {
       chatOpen ?
         setChatOpen(false)
         :
         setChatOpen(true)
+        setChatID(evt.target.value)
+        console.log('this', evt.target)
     }
 
     useEffect(function() {
@@ -42,7 +46,7 @@ export default function Connections({user}) {
               {!chatOpen ?
                 <Route path="/chat" element={< ChatListPage chats={chats} user={user} handleChat={handleChat}/>}></Route>
                 :
-                <Route path="/chat" element={< ChatPage user={user} handleChat={handleChat}/>}></Route>
+                <Route path="/chat" element={< ChatPage chatID={chatID} user={user} handleChat={handleChat}/>}></Route>
               }
               <Route path="/invitations" element={< Invitations user={user} />}></Route>
             </Routes>
