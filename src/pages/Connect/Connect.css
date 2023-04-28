@@ -8,6 +8,10 @@
 }
 
 .connect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .connect-header > h1 {
@@ -19,13 +23,17 @@
 .connect-card {
     z-index: 20;
     border: 1px solid black;
-    background-image: linear-gradient(#2a2727, grey);
+    background-image: linear-gradient(#7a7373, rgb(246, 245, 245));
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    width: 25rem;
+    height: 35rem;;
+    margin: 5%;
 }
+
 
 .connect-card-nameplate, 
 .connect-card-body {
@@ -37,4 +45,21 @@
 .connect-card-footer {
     display: flex;
     justify-content: center;
+}
+
+.connect-card-footer{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+}
+
+.stats{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.choice{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 70%; */
 }

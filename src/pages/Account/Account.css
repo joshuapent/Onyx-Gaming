@@ -1,0 +1,13 @@
+.profile-page{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+.profile-details{
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
