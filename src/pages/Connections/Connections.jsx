@@ -4,10 +4,12 @@ import './Connections.css';
 import Invitations from "../../components/Invitations/Invitations";
 import ChatListPage from "../../components/ChatListPage/ChatListPage";
 import React, { useState, useEffect, useRef } from "react";
-
+import { myChats } from "../../utilities/chat-api";
 
 export default function Connections({user}) {  
     const [chatOpen, setChatOpen] = useState(false)
+
+    const [chats, setChats] = useState(null);
 
     function handleChat() {
       chatOpen ?
@@ -16,6 +18,16 @@ export default function Connections({user}) {
         setChatOpen(true)
     }
 
+    useEffect(function() {
+      async function effectFunction() {
+        const chats = await myChats()
+        setChats(chats)
+      }
+      effectFunction()
+    }, []);
+
+
+    console.log('chats', chats)
     return (
       <div className="connections">
         <h1>Connections</h1>
@@ -28,7 +40,7 @@ export default function Connections({user}) {
           <div className="connections-page">
             <Routes>
               {!chatOpen ?
-                <Route path="/chat" element={< ChatListPage user={user} handleChat={handleChat}/>}></Route>
+                <Route path="/chat" element={< ChatListPage chats={chats} user={user} handleChat={handleChat}/>}></Route>
                 :
                 <Route path="/chat" element={< ChatPage user={user} handleChat={handleChat}/>}></Route>
               }
