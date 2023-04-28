@@ -29,8 +29,17 @@ button, a.button {
 
 .box{
   position: relative;
-  width: 380px;
-  height: 420px;
+  width: 480px;
+  height: 300px;
+  background: black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box1{
+  position: relative;
+  width: 480px;
+  height: 520px;
   background: black;
   border-radius: 8px;
   overflow: hidden;
@@ -39,8 +48,22 @@ button, a.button {
 .box::before{
   content: '';
   position: absolute;
-  width: 380px;
-  height: 420px;
+  top: -50%;
+  left: -50%;
+  width: 480px;
+  height: 300px;
+  background: linear-gradient(0deg, transparent,#45f3ff ,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box1::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 480px;
+  height: 520px;
   background: linear-gradient(0deg, transparent,#45f3ff ,#45f3ff);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -49,8 +72,23 @@ button, a.button {
 .box::after{
   content: '';
   position: absolute;
-  width: 380px;
-  height: 420px;
+  top: -50%;
+  left: -50%;
+  width: 480px;
+  height: 300px;
+  background: linear-gradient(0deg, transparent,#45f3ff ,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.box1::after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 480px;
+  height: 520px;
   background: linear-gradient(0deg, transparent,#45f3ff ,#45f3ff);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -67,9 +105,50 @@ button, a.button {
 }
 
 .form-container{
-    position: relative;
+    position: absolute;
     inset: 2px;
     border-radius: 8px;
-    background: #7b7e8a;
+    background: #000000;
     z-index: 10;
+}
+
+.auth{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authlbl{
+  color: white;
+}
+
+.signup{
+  color: white;
+}
+
+.signin{
+  color: white;
+}
+
+.loginbx{
+  margin-top: 3%;
+}
+
+.authinput{
+  max-width: 400px;
+  max-height: 30px;
+}
+
+.authinputpw{
+  width: 400px;
+  height: 30px
+}
+
+.authform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }
