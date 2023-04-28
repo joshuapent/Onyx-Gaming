@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
@@ -13,7 +13,11 @@ import { getUsers } from '../../utilities/users-api';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [users, setUsers] = useState([]);
+
+  async function users() {
+    const users = await getUsers()
+    return users;
+  }
 
 
   return (
