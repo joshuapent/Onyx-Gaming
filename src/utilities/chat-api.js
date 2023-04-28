@@ -1,8 +1,8 @@
 import { sendRequest } from "./send-request";
 const BASE_URL = '/api/chat';
 
-export async function getChat() {
-    return sendRequest(`${BASE_URL}/all`)
+export async function myChats() {
+    return sendRequest(`${BASE_URL}/myChats`)
 }
 
 export async function connectUsers(userData) {
