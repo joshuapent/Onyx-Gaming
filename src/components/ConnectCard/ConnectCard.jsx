@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { connectUsers } from "../../utilities/chat-api";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import NotInterestedIcon from '@mui/icons-material/NotInterested';

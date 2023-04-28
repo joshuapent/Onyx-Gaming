@@ -39,7 +39,7 @@ export default function Home() {
             <img
               className="cardimg"
               src="https://i.imgur.com/izMJ3ib.jpeg"
-              alt="Card image cap"
+              alt="Card cap"
             />
             <div className="card-body">
               <h5 className="card-title">Call of Duty: Modern Warfare 2</h5>
@@ -50,7 +50,7 @@ export default function Home() {
                 installment in the overall Call of Duty series
               </p>
               <button>
-                <a href="#" className="card-btn">
+                <a href="#home" className="card-btn">
                   Add to Profile
                 </a>
               </button>
@@ -60,7 +60,7 @@ export default function Home() {
             <img
               className="cardimg"
               src="https://i.imgur.com/PU9EoEz.jpeg"
-              alt="Card image cap"
+              alt="Card cap"
             />
             <div className="card-body">
               <h5 className="card-title">Fortnite</h5>
@@ -68,7 +68,7 @@ export default function Home() {
               A cooperative shooter-survival game for up to four players to fight off zombie-like husks, defend objects with fortifications you can build, and a battle royale mode where up to 100 players fight to be the last person standing.
               </p>
               <button>
-                <a href="#" className="card-btn">
+                <a href="home" className="card-btn">
                   Add to Profile
                 </a>
               </button>
@@ -78,7 +78,7 @@ export default function Home() {
             <img
               className="cardimg"
               src="https://i.imgur.com/7E7JIl8.jpeg"
-              alt="Card image cap"
+              alt="Card cap"
             />
             <div className="card-body">
               <h5 className="card-title">NBA 2K23</h5>
@@ -86,7 +86,7 @@ export default function Home() {
               NBA 2K23 is a 2022 basketball video game developed by Visual Concepts and published by 2K, based on the National Basketball Association. It is the 24th installment in the NBA 2K franchise and is the successor to NBA 2K22
               </p>
               <button>
-                <a href="#" className="card-btn">
+                <a href="#home" className="card-btn">
                   Add to Profile
                 </a>
               </button>
@@ -96,7 +96,7 @@ export default function Home() {
             <img
               className="cardimg"
               src="https://i.imgur.com/We8DDeM.png"
-              alt="Card image cap"
+              alt="Card cap"
             />
             <div className="card-body">
               <h5 className="card-title">ADD A GAME</h5>
@@ -109,7 +109,7 @@ export default function Home() {
               <div className="overlay" id="divOne">
                 <div className="wrapper1">
                   <h2>Please fill out game info</h2>
-                  <a href="#" className="close">&times;</a>
+                  <a href="#home" className="close">&times;</a>
                   <div className="content1">
                     <div className="container1">
                       <form>
