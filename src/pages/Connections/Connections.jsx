@@ -23,7 +23,7 @@ export default function Connections({user}) {
 
     useEffect(function() {
       async function effectFunction() {
-        const chats = await myChats()
+        const chats = await myChats(user._id)
         setChats(chats)
       }
       effectFunction()
