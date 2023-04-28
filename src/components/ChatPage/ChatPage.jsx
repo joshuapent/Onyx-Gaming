@@ -55,13 +55,13 @@ function ChatPage({ user, handleChat, chatID}) {
 
   return (
     <div className="ChatPage">
-      {console.log('its working', chatRoom)}
       <h1>Chat with (username)</h1> <button onClick={handleChat}>Exit Chat</button>
       <div className="chat-box">
-        <ul>
-          {msgs.map((data) => {
+        <ul className="chat-items">
+          {msgs.map((data, idx) => {
+
             return (
-              <li>
+              <li className={data.user} key={data + idx}>
                 <span>{data.user}: </span>
                 {data.msg}
               </li>
