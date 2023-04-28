@@ -1,20 +1,21 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
-import "../AuthPage/float.mp4";
+import flo from '../../assets/flo.mp4'
+
 
 
 export default function AuthPage({setUser}) {
   return (
     <main className='auth'>
-      <video autoPlay loop muted playsInline type="video/mp4">
-        <source src='../Authpage/float.mp4' type='video/mp4'/>
-      </video>
+      <video className='videobg' src={flo} autoPlay loop muted />
+      <div className='authstuff'>
       <h1>Onyx Gaming</h1>
       <div>
       <SignUpForm setUser={setUser}/>
       </div>
       <div className='loginbx'>
       <LoginForm setUser={setUser}/>
+      </div>
       </div>
     </main>
   );
