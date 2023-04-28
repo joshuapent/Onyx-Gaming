@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connectUsers } from "../../utilities/chat-api";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import NotInterestedIcon from '@mui/icons-material/NotInterested';
 
 function ConnectCard({users, handleIdxChange, idx, user}) {
     console.log(users)
@@ -49,8 +51,10 @@ function ConnectCard({users, handleIdxChange, idx, user}) {
             }
             </div>
             <div className="choice">
-                <button onClick={handleIdxChange}>Not Interested</button>
-                <button onClick={callFunctions}>Connect!</button>
+                <button onClick={handleIdxChange}><NotInterestedIcon color="error" fontSize="large"/>
+                <br /><span className="connecttxt">Not Interested</span></button>
+                <button className="check" onClick={callFunctions}><CheckCircleIcon color="success" fontSize="large"/>
+                <br /><span className="connecttxt">Connect</span></button>
             </div>
         </div>
     </>
