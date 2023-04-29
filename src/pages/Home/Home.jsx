@@ -1,9 +1,29 @@
 import "./Home.css";
 import "../../components/NavBar/NavBar";
-import "../Home/vanilla-tilt";
 import space from '../../assets/TEST.mp4'
+import { useState } from "react";
+import { createGame } from "../../utilities/game-api";
+
+
 
 export default function Home() {
+  const [input, setInput] = useState({
+    name: "",
+    image: "",
+    description: ""
+  })
+  function handleChange(e) {
+    setInput({...input, [e.target.name]:e.target.value});
+  }
+  function handleSubmit(e) {
+    try {
+      e.preventdefault()
+      createGame(input)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  
   return (
     <div className="home">
       <div className="paralax">
@@ -113,13 +133,13 @@ export default function Home() {
                   <a href="#home" className="close">&times;</a>
                   <div className="content1">
                     <div className="container1">
-                      <form>
+                      <form onSubmit={handleSubmit}> 
                         <label>Game Name</label>
-                        <input type="text" placeholder="Name of game" />
+                        <input onChange={handleChange} name="name" type="text" placeholder="Name of game" />
                         <label>Image URL</label>
-                        <input type="text" placeholder="Please insert image URL" />
+                        <input onChange={handleChange} name="image" type="text" placeholder="Please insert image URL" />
                         <label>Description</label>
-                        <textarea placeholder="Your Query Here..."></textarea>
+                        <textarea onChange={handleChange} name="description" placeholder="Description of game..."></textarea>
                         <input type="submit" value="Submit" />
                       </form>
                     </div>
@@ -128,7 +148,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <script type="text/javascript" src="vanilla-tilt.js"></script>
         </div>
 
       {window.addEventListener("scroll", function (e) {
