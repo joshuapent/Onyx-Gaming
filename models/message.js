@@ -3,10 +3,6 @@ const messageSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    recipient_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
     text: {
             type: String, 
             required: true
