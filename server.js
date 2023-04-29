@@ -36,8 +36,8 @@ io.on('connection', (socket) => {
     console.log(`user id: ${socket.id} has disconnected`);
   })
 
-  socket.on('newMsg', (msg) => {
-    socket.broadcast.emit("sendMsg", msg)
+  socket.on('sendMsg', (msg) => {
+    socket.broadcast.emit('newMsg', msg)
   })
 
 });
