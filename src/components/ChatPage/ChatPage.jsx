@@ -43,6 +43,8 @@ function ChatPage({ user, handleChat, chatID}) {
 
     socket.connect();
 
+    chatRoom && socket.emit('enter_convo', chatRoom._id)
+
     socket.on("newMsg", (msg) => {
       setMsgs((msgs) => [...msgs, msg]);
     });
@@ -51,13 +53,14 @@ function ChatPage({ user, handleChat, chatID}) {
       socket.off("newMsg");
       socket.disconnect();
     };
-  }, []);
+  }, [chatRoom]);
 
   function handleSubmit(e) {
     e.preventDefault();
     const data = { msg: input, user: user.name };
     setMsgs((msgs) => [...msgs, data]);
-    socketRef.current.emit("sendMsg", data);
+    console.log(chatRoom._id)
+    socketRef.current.emit("sendMsg", data, chatRoom._id);
     setInput("");
   }
 
