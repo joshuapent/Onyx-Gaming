@@ -3,11 +3,11 @@ import "../../components/NavBar/NavBar";
 import space from "../../assets/TEST.mp4";
 import { useEffect, useState } from "react";
 import { createGame } from "../../utilities/game-api";
-import GameCard from '../../components/Games/GameCard';
-import GameForm from '../../components/GameForm/GameForm';
+import GameCard from "../../components/Games/GameCard";
+import GameForm from "../../components/GameForm/GameForm";
 
 export default function Home() {
-  const [games, setGames] = useState(null)
+  const [games, setGames] = useState(null);
   const [input, setInput] = useState({
     name: "",
     image: "",
@@ -16,20 +16,21 @@ export default function Home() {
   function handleChange(e) {
     setInput({ ...input, [e.target.name]: e.target.value });
   }
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
+    e.preventDefault();
     try {
-      e.preventdefault();
-      createGame(input);
+      await createGame(input);
+      console.log("something")
     } catch (err) {
       console.log(err);
     }
   }
   useEffect(() => {
     const fetchGames = async () => {
-      const res = await fetch('/api/games')
-      const json = await res.json()
+      const response = await fetch('/api/games')
+      const json = await response.json()
 
-      if (res.ok) {
+      if (response.ok) {
         setGames(json)
       }
     }
@@ -73,9 +74,7 @@ export default function Home() {
         </div>
       </div>
       <div className="gamecards">
-        {games && games.map((game) => (
-          <GameCard key={game._id} game={game} />
-        ))}
+        {games && games.map((game) => <GameCard key={game._id} game={game} />)}
         <div className="card" data-tilt>
           <img
             className="cardimg"
@@ -164,7 +163,29 @@ export default function Home() {
                 </a>
                 <div className="content1">
                   <div className="container1">
-                    <GameForm />
+                    <form onSubmit={handleSubmit}>
+                      <label>Game Name</label>
+                      <input
+                        onChange={handleChange}
+                        name="name"
+                        type="text"
+                        placeholder="Name of game"
+                      />
+                      <label>Image URL</label>
+                      <input
+                        onChange={handleChange}
+                        name="image"
+                        type="text"
+                        placeholder="Please insert image URL"
+                      />
+                      <label>Description</label>
+                      <textarea
+                        onChange={handleChange}
+                        name="description"
+                        placeholder="Description of game..."
+                      ></textarea>
+                      <button type="submit">Submit</button>
+                    </form>
                   </div>
                 </div>
               </div>
