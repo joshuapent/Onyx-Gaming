@@ -12,7 +12,7 @@ async function newMessage(req, res) {
 
 async function chatMsgs(req, res) {
     try {
-      const msgs = await Message.find({chatID: req.body});
+      const msgs = await Message.find({chatID: req.params.id});
       res.json(msgs)
     } catch (err) {
       res.status(400).json(err);
