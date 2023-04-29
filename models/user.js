@@ -21,16 +21,17 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  connections: [ this ],
-  games: {
+  games: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Game'
-  },
+    ref: 'Game',
+  }],
   rating: {
     type: Number,
+    default: 1,
   },
   bio: {
     type: String,   
+    default: 'No bio created yet'
   },
 }, {
   timestamps: true,
