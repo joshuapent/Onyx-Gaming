@@ -5,7 +5,6 @@ async function newMessage(req, res) {
     try {
       const msg = await Message.create(req.body);
       res.json(msg)
-      res.status(200).json(game)
     } catch (err) {
       res.status(400).json(err);
     }
