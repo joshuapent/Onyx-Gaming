@@ -19,8 +19,7 @@ async function create(req, res) {
 
 async function editBio(req, res) {
   try {
-    const user = await User.findByIdAndUpdate(req.params.id, {bio: req.body})
-    res.json(user)
+    await User.findByIdAndUpdate(req.params.id, {bio: req.body})
   } catch (err) {
     res.status(400).json(err);
   }
@@ -28,8 +27,7 @@ async function editBio(req, res) {
 
 async function editRating(req, res) {
   try {
-    const user = await User.findByIdAndUpdate(req.params.id, {rating: req.body})
-    res.json(user)
+    await User.findByIdAndUpdate(req.params.id, {rating: req.body})
   } catch (err) {
     res.status(400).json(err);
   }
@@ -37,8 +35,8 @@ async function editRating(req, res) {
 
 async function remove(req, res) {
   try {
-    const user = await User.findByIdAndDelete(req.body)
-    res.json(user)
+    await User.findByIdAndDelete(req.body)
+    localStorage.removeItem('token');
   } catch (err) {
     res.status(400).json(err);
   }
