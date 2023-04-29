@@ -17,6 +17,33 @@ async function create(req, res) {
   }
 }
 
+async function editBio(req, res) {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.id, {bio: req.body})
+    res.json(user)
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}
+
+async function editRating(req, res) {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.id, {rating: req.body})
+    res.json(user)
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}
+
+async function remove(req, res) {
+  try {
+    const user = await User.findByIdAndDelete(req.body)
+    res.json(user)
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}
+
 async function login(req, res) {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -67,4 +94,7 @@ module.exports = {
   checkToken,
   allUsers,
   aUser,
+  remove,
+  editBio,
+  editRating,
 };
