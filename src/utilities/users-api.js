@@ -16,3 +16,7 @@ export async function checkToken() {
 export async function getUsers() {
   return sendRequest(`${BASE_URL}/all`)
 }
+
+export async function getUser(id) {
+  return sendRequest(`${BASE_URL}/user/${id}`)
+}

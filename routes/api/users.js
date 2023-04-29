@@ -7,6 +7,6 @@ router.post('/', usersCtrl.create);
 router.post('/login', usersCtrl.login);
 router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
 router.get('/all', usersCtrl.allUsers);
-
+router.get('/user/:id', usersCtrl.aUser);
 
 module.exports = router;

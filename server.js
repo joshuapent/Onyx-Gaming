@@ -36,7 +36,11 @@ io.on('connection', (socket) => {
     console.log(`user id: ${socket.id} has disconnected`);
   })
 
-  socket.on('newMsg', (msg) => {
-    socket.broadcast.emit('')
+  socket.on('sendMsg', (msg, convo) => {
+    socket.to(convo).emit('newMsg', msg, convo)
   })
+  socket.on('enter_convo', (convo) => {
+    socket.join(convo)
+  })
+
 });
