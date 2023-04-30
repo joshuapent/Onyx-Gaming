@@ -56,7 +56,7 @@
 }
 
 section{
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 100vh;
     background: #111111;
@@ -206,11 +206,11 @@ section .row:nth-child(even) div:nth-child(2) {
     margin-right: auto;
     margin-top: 10%;
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     right: 0;
     width: 650px;
-    height: 500px;
+    /* height: 500px; */
     border-radius: 20px;
     background: rgb(1, 1, 1);
 }
@@ -244,6 +244,7 @@ section .row:nth-child(even) div:nth-child(2) {
     position: absolute;
     left: -3px;
     top: -5px;
+    border-radius: 20px;
     background: linear-gradient(45deg,rgb(98, 0, 255),aqua,aqua,rgb(98, 0, 255),rgb(98, 0, 255));
     background-size: 400%;
     width: calc(100% + 7px);
@@ -277,7 +278,7 @@ section .row:nth-child(even) div:nth-child(2) {
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-top: 57.5%;
+    /* margin-top: 57.5%; */
     width: 100%;
     height: 100%;
     border-bottom-left-radius: 20px;
@@ -285,7 +286,7 @@ section .row:nth-child(even) div:nth-child(2) {
 }
 
 .chatwith{
-    background: rgb(0, 125, 125);
+    /* background: rgb(0, 125, 125); */
     margin-top: -0%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -296,7 +297,7 @@ section .row:nth-child(even) div:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(0, 125, 125);
+    background: linear-gradient(268.91deg,rgb(1, 115, 115) 0%,rgb(65, 175, 175) 20%, rgb(76, 171, 171) 50%, rgb(10, 122, 122) 100%);
     margin-top: -0%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -316,5 +317,15 @@ section .row:nth-child(even) div:nth-child(2) {
 }
 
 .chat-items li {
+    color: rgb(0, 0, 0);
+    background: rgb(164, 162, 164);
+    max-width: fit-content;
+    border-radius: 3px;
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.inviteh1{
     color: white;
+    
 }

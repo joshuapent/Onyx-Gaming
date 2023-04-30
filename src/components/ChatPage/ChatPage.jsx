@@ -80,7 +80,7 @@ function ChatPage({ user, handleChat, chatID }) {
           {msgs.map((data, idx) => {
             return (
               <li className={data.user} key={data + idx}>
-                <span>{data.user}: </span>
+                <span>{data.user}:&nbsp;</span>
                 {data.msg}
               </li>
             );
