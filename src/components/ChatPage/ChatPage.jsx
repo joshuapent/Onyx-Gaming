@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 import { aChat } from "../../utilities/chat-api";
 import { getUser } from "../../utilities/users-api";
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import SendIcon from '@mui/icons-material/Send';
 
-function ChatPage({ user, handleChat, chatID}) {
+function ChatPage({ user, handleChat, chatID }) {
   const [input, setInput] = useState("");
   const [msgs, setMsgs] = useState([]);
   const [chatRoom, setchatRoom] = useState(null);
@@ -11,25 +13,25 @@ function ChatPage({ user, handleChat, chatID}) {
 
   useEffect(() => {
     async function setRoom() {
-      const newRoom = await aChat(chatID)
-      setchatRoom(newRoom)
+      const newRoom = await aChat(chatID);
+      setchatRoom(newRoom);
       // const chatUsers = await findUsers(newRoom.users)
     }
-    setRoom()
-  }, [chatID])
+    setRoom();
+  }, [chatID]);
 
   useEffect(() => {
     async function chatUsers() {
       if (chatRoom.users[0] !== user._id) {
-        const friend = await getUser(chatRoom.users[0])
-        setFriend(friend)
+        const friend = await getUser(chatRoom.users[0]);
+        setFriend(friend);
       } else {
-        const friend = await getUser(chatRoom.users[1])
-        setFriend(friend)
+        const friend = await getUser(chatRoom.users[1]);
+        setFriend(friend);
       }
     }
-    chatRoom && chatUsers()
-  }, [chatRoom])
+    chatRoom && chatUsers();
+  }, [chatRoom]);
 
   const socketRef = useRef();
 
@@ -43,7 +45,7 @@ function ChatPage({ user, handleChat, chatID}) {
 
     socket.connect();
 
-    chatRoom && socket.emit('enter_convo', chatRoom._id)
+    chatRoom && socket.emit("enter_convo", chatRoom._id);
 
     socket.on("newMsg", (msg) => {
       setMsgs((msgs) => [...msgs, msg]);
@@ -59,7 +61,7 @@ function ChatPage({ user, handleChat, chatID}) {
     e.preventDefault();
     const data = { msg: input, user: user.name };
     setMsgs((msgs) => [...msgs, data]);
-    console.log(chatRoom._id)
+    console.log(chatRoom._id);
     socketRef.current.emit("sendMsg", data, chatRoom._id);
     setInput("");
   }
@@ -69,13 +71,16 @@ function ChatPage({ user, handleChat, chatID}) {
   }
   return (
     <div className="ChatPage">
-      <h1>Chat with {friend && friend.name}</h1> <button onClick={handleChat}>Exit Chat</button>
+      <div className="chattp">
+        <h1 className="chatwith">Chat with {friend && friend.name}</h1>
+        <button className="exit" onClick={handleChat}><ExitToAppIcon fontSize="large" /><span>Exit Chat</span> </button>
+      </div>
       <div className="chat-box">
         <ul className="chat-items">
           {msgs.map((data, idx) => {
             return (
               <li className={data.user} key={data + idx}>
-                <span>{data.user}: </span>
+                <span>{data.user}:&nbsp;</span>
                 {data.msg}
               </li>
             );
@@ -83,9 +88,9 @@ function ChatPage({ user, handleChat, chatID}) {
         </ul>
       </div>
       <div className="chat-wrapper">
-        <form onSubmit={handleSubmit}>
+        <form className="msgbx" onSubmit={handleSubmit}>
           <input type="text" value={input} onChange={handleChange} />
-          <button type="submit">Send</button>
+          <button className="sendbtn" type="submit"><SendIcon  fontSize="large"/><span>Send</span></button>
         </form>
       </div>
     </div>

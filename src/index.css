@@ -129,23 +129,33 @@ button, a.button {
   color: #45f3ff;
 }
 
-.signup{
+.signin, .signup{
+  position: relative;
+  display: inline-block;
   color: white;
+  overflow: hidden;
+  transition: all 0.5s;
+
 }
 
-.signin{
-  color: white;
+.signin:hover, .signup:hover{
+  background: #45f3ff;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #45f3ff, 0 0 25px #45f3ff, 0 0 50px #45f3ff, 0 0 100px #45f3ff;
 }
 
 .loginbx{
   margin-top: 3%;
 }
 
+
+
 .authinput{
   max-width: 400px;
   max-height: 30px;
   background: transparent;
-  border: none;
+  outline: none;
   letter-spacing: 0.05em;
   font-size: 1em;
   color: #45f3ff;
@@ -156,6 +166,7 @@ button, a.button {
   width: 400px;
   height: 30px;
   background: transparent;
+  border: 1px solid #ccc;
   color: #45f3ff;
   letter-spacing: 0.05em;
   font-size: 1em;

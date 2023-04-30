@@ -13,7 +13,7 @@
                             })
                             }
                         </div>
-                        <button onClick={() => handleChat(chat._id)}>Open</button>
+                        <button className="chat-users-open" onClick={() => handleChat(chat._id)}>Open</button>
                     </div>
                 )
             })
