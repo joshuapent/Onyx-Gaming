@@ -29,7 +29,7 @@ export default function App() {
               <Route path="/" element={< Home />}></Route>
               <Route path="/connect/*" element={< Connect user={user}/>}></Route>
               <Route path="/connections/*" element={< Connections user={user} users={users}/>}></Route>
-              <Route path="/account/*" element={< Account user={user}/>}></Route>
+              <Route path="/account/*" element={< Account user={user} setUser={setUser}/>}></Route>
             </Routes>
           </>
           :

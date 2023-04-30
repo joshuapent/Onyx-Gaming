@@ -19,7 +19,7 @@ async function create(req, res) {
 
 async function editBio(req, res) {
   try {
-    await User.findByIdAndUpdate(req.params.id, {bio: req.body})
+    await User.findByIdAndUpdate(req.params.id, req.body)
   } catch (err) {
     res.status(400).json(err);
   }
@@ -27,7 +27,7 @@ async function editBio(req, res) {
 
 async function editRating(req, res) {
   try {
-    await User.findByIdAndUpdate(req.params.id, {rating: req.body})
+    await User.findByIdAndUpdate(req.params.id, req.body)
   } catch (err) {
     res.status(400).json(err);
   }

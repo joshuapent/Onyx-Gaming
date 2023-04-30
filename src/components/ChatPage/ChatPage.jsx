@@ -62,7 +62,7 @@ function ChatPage({ user, handleChat, chatID }) {
     console.log('hi')
     console.log(chatRoom._id)
     e.preventDefault();
-    const data = { msg: input, user: user.name };
+    const data = { msg: input, user: user.gamertag, id: user._id };
     try {
       // await newMessage({sender_id: user._id, text: input, chatID: chatRoom._id})
       setMsgs((msgs) => [...msgs, data]);
@@ -81,14 +81,14 @@ function ChatPage({ user, handleChat, chatID }) {
   return (
     <div className="ChatPage">
       <div className="chattp">
-        <h1 className="chatwith">Chat with {friend && friend.name}</h1>
+        <h1 className="chatwith">Chat with {friend && friend.gamertag}</h1>
         <button className="exit" onClick={handleChat}><ExitToAppIcon fontSize="large" /><span>Exit Chat</span> </button>
       </div>
       <div className="chat-box">
         <ul className="chat-items">
           {msgs.map((data, idx) => {
             return (
-              <li className={data.user} key={data + idx}>
+              <li className={data.id === user._id ? 'homeClass' : 'guestClass'} key={data + idx}>
                 <span>{data.user}:&nbsp;</span>
                 {data.msg}
               </li>
