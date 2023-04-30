@@ -61,28 +61,31 @@
 }
 
 .terminal{
-    font-size: 80px;
+    font-size: 5vw;
     font-family: VT323;
     text-align: center;
     margin: 0px auto;
     display: block;
 }
 
+.staticParent {
+    display: inline-block;
+}
+
 .static {
     margin-top: 2%;
     margin-bottom: 4%;
-    width: 40%;
     position: relative;
-    font-size: 30px;
+    width: 100%;
+    font-size: 2.75vw;
     font-family: VT323;
     border-right: 2px solid;
     white-space: nowrap;
     overflow: hidden;
     color: rgb(128, 255, 0);
-    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;
-    animation: 
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;    animation: 
         typing 8s steps(57),
-        cursor .4s step-end infinite alternate;
+        cursor .4s step-end infinite alternate;  
 }
 
 /* .static::after{

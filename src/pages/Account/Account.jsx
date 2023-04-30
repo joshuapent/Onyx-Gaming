@@ -14,13 +14,17 @@ function Account({ user, games }) {
       <img src={scanlines} alt="" id="scan" className="noselect" />
       <img src={bezel} alt="" className="bezel" />
       <div className="profile">
-        <h1 className="terminal">WELCOME TO TERMINAL <TerminalIcon fontSize="large"/></h1>
-        <div className="static">You are now operating in your computer's local terminal.</div>
-        <h1 className="gamer-tag">Gamer-Tag</h1>
+        <h1 className="terminal">WELCOME, {user.gamertag.toUpperCase()} TO YOUR TERMINAL <TerminalIcon fontSize="large"/></h1>
+        <div className="staticParent"><div className="static">Update your Account information here!</div></div>
+        <h1 className="gamer-tag">Gamer-Tag:</h1>
         <div className="profile-details">
-          <form action=""></form>
+          <form>
+          <button className="update-profile-btn">Update</button>
+          </form>
+          <form>
+          <button className="update-profile-btn">Update</button>
+          </form>
         </div>
-        <button className="update-profile-btn">Update</button>
         <div className="typewrtie">
           
         </div>
