@@ -149,11 +149,38 @@ button, a.button {
   margin-top: 3%;
 }
 
+.inputBox{
+  /* display: flex; */
+  width: 84%;
+}
+
+.inputBox span{
+  position: absolute;
+  width: 100px;
+  left: 0;
+  padding: 10px 200px 10px;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #45f3ff;
+  font-size: 1.2em;
+  letter-spacing: 0.3em;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  color: #ffffff;
+  transform: translateY(-34px);
+  font-size: 1em;
+}
+
+
+
 .authinput{
   max-width: 400px;
   max-height: 30px;
   background: transparent;
-  border: none;
+  /* border: none; */
+  outline: none;
   letter-spacing: 0.05em;
   font-size: 1em;
   color: #45f3ff;
@@ -164,6 +191,7 @@ button, a.button {
   width: 400px;
   height: 30px;
   background: transparent;
+  border: 1px solid #ccc;
   color: #45f3ff;
   letter-spacing: 0.05em;
   font-size: 1em;

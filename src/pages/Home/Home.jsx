@@ -64,7 +64,7 @@ export default function Home() {
             <div className="content-txt">
               <h1>It's Quick and Easy!</h1>
               <h3>
-                Choose one of the games from the collection below and add it to
+                Browse through the games from the collection below. When you find one that you own, add it to
                 your profile. You can then navigate to the "connect" page where
                 you can browse through gamers with the same games looking to
                 team-up{" "}
@@ -72,6 +72,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="gmtitle">
+        <h2>GAMES</h2>
       </div>
       <div className="gamecards">
         {games && games.map((game) => <GameCard key={game._id} game={game} />)}

@@ -137,12 +137,20 @@ content {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.463);
     border: 1px solid #fff;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index:0;
+}
+
+.content-txt h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 
 .content-txt:before{
@@ -155,6 +163,19 @@ content {
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     z-index: 3;
+}
+
+.gmtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gmtitle h2{
+    font-size: 120px;
+    font-weight: 500;
+    font-family: 'Black Ops One';
+    text-shadow: 0 0 12px rgb(0, 0, 0), 0 0 20px rgb(0, 191, 255), 0 0 100px purple, 0 0 50px rgb(0, 187, 255); 
 }
 
 .gamecards{
