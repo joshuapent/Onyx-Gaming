@@ -177,6 +177,25 @@ section .row:nth-child(even) div:nth-child(2) {
     left: 0;
     right: 0;
     width:200px;
+    background: rgb(1, 1, 1);
+    /* border-top: 3px solid aqua;
+    border-left: 3px solid aqua;
+    border-right: 3px solid aqua; */
+}
+
+.chat-users:before,
+.chat-users:after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,rgb(98, 0, 255),aqua,aqua,rgb(98, 0, 255),rgb(98, 0, 255));
+    background-size: 400%;
+    width: calc(100% + 7px);
+    height: calc(100% + 11px);
+    z-index: -2;
+    animation: motion 20s linear infinite;
 }
 
 .chat-users-open{
@@ -188,6 +207,22 @@ section .row:nth-child(even) div:nth-child(2) {
     left: 0;
     right: 0;
     width:200px;
+    z-index: 4;
+}
+
+.chat-users-open:before,
+.chat-users-open:after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -5px;
+    border-radius: 20px;
+    background: linear-gradient(45deg,rgb(98, 0, 255),aqua,aqua,rgb(98, 0, 255),rgb(98, 0, 255));
+    background-size: 400%;
+    width: calc(100% + 7px);
+    height: calc(100% + 11px);
+    z-index: -2;
+    animation: motion 20s linear infinite;
 }
 
 .individual-chat{

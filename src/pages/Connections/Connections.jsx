@@ -36,7 +36,7 @@ export default function Connections({ user }) {
         <div className="connections">
           <div className="connections-links">
             <Link className="connections-link" to="chat/">
-              Chat
+              Chats
             </Link>
             &nbsp; | &nbsp;
             <Link className="connections-link" to="invitations/">
