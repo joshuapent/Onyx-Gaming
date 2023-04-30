@@ -4,6 +4,7 @@ import { aChat } from "../../utilities/chat-api";
 import { getUser } from "../../utilities/users-api";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SendIcon from '@mui/icons-material/Send';
+import { findMessages, newMessage } from "../../utilities/messages-api";
 
 function ChatPage({ user, handleChat, chatID }) {
   const [input, setInput] = useState("");
@@ -57,13 +58,21 @@ function ChatPage({ user, handleChat, chatID }) {
     };
   }, [chatRoom]);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
+    console.log('hi')
+    console.log(chatRoom._id)
     e.preventDefault();
     const data = { msg: input, user: user.name };
-    setMsgs((msgs) => [...msgs, data]);
-    console.log(chatRoom._id);
-    socketRef.current.emit("sendMsg", data, chatRoom._id);
-    setInput("");
+    try {
+      // await newMessage({sender_id: user._id, text: input, chatID: chatRoom._id})
+      setMsgs((msgs) => [...msgs, data]);
+      console.log(chatRoom._id);
+      socketRef.current.emit("sendMsg", data, chatRoom._id);
+      setInput("");
+    }
+    catch (err) {
+      console.log(err)
+    }
   }
 
   function handleChange(e) {

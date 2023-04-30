@@ -6,9 +6,9 @@
                 return (
                     <div key={chat + idx} className="individual-chat">
                         <div className="chat-users">
-                            {chat.users.map((user, idx) => {
-                                return (
-                                    <h1 key={user + idx}>{user.name}</h1>
+                            {chat.users.map((usermap, idx) => {
+                                if (usermap._id !== user._id) return (
+                                    <h5 key={usermap + idx}>Chat with: {usermap.gamertag}</h5>
                                 )
                             })
                             }
