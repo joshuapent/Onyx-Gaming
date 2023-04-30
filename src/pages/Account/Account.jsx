@@ -15,11 +15,15 @@ function Account({ user, games }) {
       <img src={bezel} alt="" className="bezel" />
       <div className="profile">
         <h1 className="terminal">WELCOME TO TERMINAL <TerminalIcon fontSize="large"/></h1>
+        <div className="static">You are now operating in your computer's local terminal.</div>
         <h1 className="gamer-tag">Gamer-Tag</h1>
         <div className="profile-details">
           <form action=""></form>
         </div>
         <button className="update-profile-btn">Update</button>
+        <div className="typewrtie">
+          
+        </div>
       </div>
     </div>
   );
