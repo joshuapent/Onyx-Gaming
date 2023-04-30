@@ -10,7 +10,12 @@
     justify-content: center;
     font-family: 'Black Ops One';
     font-size: 50px;
-    
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width:500px;
 }
 
 .connections > h1 {
@@ -163,18 +168,42 @@ section .row:nth-child(even) div:nth-child(2) {
 }
 
 .chat-users{
-    color: white;
-}
 
-.chat-users-open{
     color: white;
-}
-
-.individual-chat{
+    margin-top: 15%;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    width:200px;
+}
+
+.chat-users-open{
+    color: white;
+    margin-top: 40%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width:200px;
+}
+
+.individual-chat{
+    position: absolute;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
+}
+
+.ChatPage{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }

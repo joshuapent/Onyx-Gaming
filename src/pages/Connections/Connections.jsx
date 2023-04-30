@@ -5,29 +5,6 @@ import Invitations from "../../components/Invitations/Invitations";
 import ChatListPage from "../../components/ChatListPage/ChatListPage";
 import React, { useState, useEffect } from "react";
 import { myChats } from "../../utilities/chat-api";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGamepad,
-  faBolt,
-  faTv,
-  faVolumeHigh,
-  faKeyboard,
-  faRobot,
-  faPowerOff,
-  faUser,
-  faWifi,
-  faHourglassHalf,
-  faPuzzlePiece,
-  faHeart,
-  faGhost,
-  faHandFist,
-  faDiceD6,
-  faHeadset,
-  faDice,
-  faVrCardboard,
-  faChessRook,
-  faChessKnight,
-} from "@fortawesome/free-solid-svg-icons";
 import ConnectBg from "../../components/ConnectBg/ConnectBg";
 
 export default function Connections({ user }) {
