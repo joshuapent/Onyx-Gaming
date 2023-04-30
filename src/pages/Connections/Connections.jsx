@@ -56,7 +56,6 @@ export default function Connections({ user }) {
   return (
     <section>
       <main className="chatcont">
-        <h1>Connections</h1>
         <div className="connections">
           <div className="connections-links">
             <Link className="connections-link" to="chat/">
