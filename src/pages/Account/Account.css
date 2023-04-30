@@ -45,10 +45,6 @@
     text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
 }
 
-.gamer-tag{
-
-}
-
 .update-profile-btn{
     color: rgb(128, 255, 0);
     text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;
@@ -87,19 +83,6 @@
         typing 8s steps(57),
         cursor .4s step-end infinite alternate;  
 }
-
-/* .static::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid greenyellow;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    background: rgb(0, 32, 0);
-    animation: typing 15.5s steps(56) infinite;
-} */
 
 @keyframes cursor {
     50% { border-color: transparent; }  
