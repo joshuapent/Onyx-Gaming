@@ -4,20 +4,26 @@ import { removeUser, updateBio, updateRating } from "../../utilities/users-api";
 import scanlines from "../../assets/scanlines.png";
 import bezel from "../../assets/bezel.png";
 import TerminalIcon from '@mui/icons-material/Terminal';
+import { getUser } from '../../utilities/users-service';
 
 function Account({ user, setUser}) {
-  const [account, setAccount] = useState(user);
-  const [input, setInput] = useState('');
+  const [account, setAccount] = useState(getUser());
+  const [num, setNum] = useState('');
+  const [text, setText] = useState('');
 
-  function handleChange(e) {
-    setInput(e.target.value);
+  function handleKd(evt) {
+    setNum(evt.target.value);
   }
 
-  async function submitBio(e) {
-    e.preventDefault()
-    const bio = {bio: input};
+  function handleBio(evt) {
+    setText(evt.target.value);
+  }
+
+  async function submitBio(evt) {
+    evt.preventDefault();
+    const bio = {bio: text};
     console.log(bio, user._id)
-    setInput('');
+    setText('');
     try {
       await updateBio(user._id, bio)
     } catch (err) {
@@ -27,9 +33,8 @@ function Account({ user, setUser}) {
 
   async function submitKD(e) {
     e.preventDefault()
-    const KD = {rating: input};
-    setInput('');
-    setUser(...user, KD)
+    const KD = {rating: num};
+    setNum('');
     try {
       await updateRating(user._id, KD)
     } catch (err) {
@@ -47,12 +52,12 @@ function Account({ user, setUser}) {
         <div className="profile-details">
           <form onSubmit={submitBio}>
             <label htmlFor="Bio">Tell us about you!</label>
-            <input type="text" name="Bio" onChange={handleChange} placeholder={user.bio}/>
+            <input type="text" name="Bio" onChange={handleBio} value={text} placeholder={user.bio}/>
             <button type="Submit" className="update-profile-btn">Update</button>
           </form>
           <form onSubmit={submitKD}>
             <label htmlFor="K/D">What's Your K/D</label>
-            <input type="number" name="K/D" placeholder={user.rating} onChange={handleChange}/>
+            <input type="number" name="K/D" placeholder={user.rating} value={num} onChange={handleKd}/>
             <button type="Submit" className="update-profile-btn">Update</button>
           </form>
         </div>
