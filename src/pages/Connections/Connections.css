@@ -276,6 +276,15 @@ section .row:nth-child(even) div:nth-child(2) {
     animation: motion 20s linear infinite;
 }
 
+.user-chat {
+    min-height: 30vh;
+}
+
+.no-chats { 
+    color: white;
+    padding: 1em;
+}
+
 .ChatPage,
 .user-chat {
     position: absolute;

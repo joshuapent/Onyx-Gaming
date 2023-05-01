@@ -1,7 +1,7 @@
  function ChatListPage({ chats, user, handleChat}) {
   return (
     <div className="user-chat">
-        {chats &&
+        {chats[0] ?
             chats.map((chat, idx) => {
                 return (
                     <div key={chat + idx} className="individual-chat">
@@ -17,6 +17,8 @@
                     </div>
                 )
             })
+            :
+            <h1 className="no-chats">You have no connections, click on the connect tab to make some! </h1>
         }
     </div>
   );
