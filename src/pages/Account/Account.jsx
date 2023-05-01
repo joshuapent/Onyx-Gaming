@@ -4,23 +4,98 @@ import { removeUser, updateBio, updateRating } from "../../utilities/users-api";
 import scanlines from "../../assets/scanlines.png";
 import bezel from "../../assets/bezel.png";
 import TerminalIcon from '@mui/icons-material/Terminal';
+import { getUser, logOut} from '../../utilities/users-service';
 
-function Account({ user, games }) {
-  const [account, setAccount] = useState(user);
-  console.log(account);
+function Account({ user, setUser}) {
+  const [account, setAccount] = useState(getUser());
+  const [num, setNum] = useState('');
+  const [text, setText] = useState('');
+  const [deleteForm, setDeleteForm] = useState(false)
+
+  function handleKd(evt) {
+    setNum(evt.target.value);
+  }
+
+  function handleBio(evt) {
+    setText(evt.target.value);
+  }
+
+  function removeMyAccount() {
+    logOut()
+    setUser(null)
+    deleteAccount()
+  }
+
+  async function deleteAccount() {
+    try {
+      await removeUser({id: user._id})
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
+  async function submitBio(evt) {
+    evt.preventDefault();
+    const bio = {bio: text};
+    setText('');
+    try {
+      setUser((oldUser) => ({...oldUser, bio: text}))
+      await updateBio(user._id, bio)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  async function submitKD(e) {
+    e.preventDefault()
+    const KD = {rating: num};
+    setUser((oldUser) => ({...oldUser, rating: num}))
+    setNum('');
+    try {
+      await updateRating(user._id, KD)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  function toggleDeleteForm() {
+    if (!deleteForm) {
+      setDeleteForm(true)
+    } else {
+      setDeleteForm(false)
+    }
+  }
 
   return (
     <div className="profile-page">
       <img src={scanlines} alt="" id="scan" className="noselect" />
       <img src={bezel} alt="" className="bezel" />
       <div className="profile">
-        <h1 className="terminal">WELCOME TO TERMINAL <TerminalIcon fontSize="large"/></h1>
-        <div className="static">You are now operating in your computer's local terminal.</div>
-        <h1 className="gamer-tag">Gamer-Tag</h1>
+        <h1 className="terminal">WELCOME, {user.gamertag.toUpperCase()} TO YOUR TERMINAL <TerminalIcon fontSize="large"/></h1>
+        <div className="staticParent"><div className="static">Update your Account information here!</div></div>
         <div className="profile-details">
-          <form action=""></form>
+          <form onSubmit={submitBio} className="bio-form">
+            <p>Tell us about you!</p>
+            <input type="text" name="Bio" onChange={handleBio} value={text} placeholder={user.bio}/>
+            <button type="Submit" className="update-profile-btn">Update</button>
+          </form>
+          <form onSubmit={submitKD} className="kd-form">
+            <p>What's Your K/D</p>
+            <input type="number" step=".01" name="K/D" placeholder={user.rating} value={num} onChange={handleKd}/>
+            <button type="Submit" className="update-profile-btn">Update</button>
+          </form>
+          {!deleteForm ? 
+            <div>
+              <button className="account-delete" onClick={toggleDeleteForm}>Delete Account</button>
+            </div>
+            :
+            <div>
+              <label htmlFor="deleteformbutton">Are you sure you want to delete your account?</label>
+              <button className="account-delete" name="deleteformbutton" onClick={removeMyAccount}>Yes!</button>
+              <button className="account-delete" name="changedmymind" onClick={toggleDeleteForm}>No I've changed my mind</button>
+            </div>
+          }
         </div>
-        <button className="update-profile-btn">Update</button>
         <div className="typewrtie">
           
         </div>

@@ -11,7 +11,7 @@
 .profile-details{
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(119, 236, 2);
 }
 
 #scan, .bezel{
@@ -21,6 +21,36 @@
     top: 0;
     left: 0;
     pointer-events: none;    
+}
+
+.profile-details > form > input {
+    border: none;
+    border-radius: 10px;
+    color: rgb(119, 236, 2);
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.account-delete {
+    margin-top: 3em;
+    color: rgb(119, 236, 2);
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
+}
+
+.account-delete:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow, 0 0 50px greenyellow, 0 0 100px greenyellow;
+}
+
+.bio-form > input {
+    max-width: 80%;
+}
+
+.kd-form > input {
+    max-width: 5em;
+    padding-left: 0.7em;
 }
 
 #scan{
@@ -45,10 +75,6 @@
     text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
 }
 
-.gamer-tag{
-
-}
-
 .update-profile-btn{
     color: rgb(128, 255, 0);
     text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;
@@ -61,42 +87,32 @@
 }
 
 .terminal{
-    font-size: 80px;
+    font-size: 5vw;
     font-family: VT323;
     text-align: center;
     margin: 0px auto;
     display: block;
 }
 
+.staticParent {
+    display: inline-block;
+}
+
 .static {
     margin-top: 2%;
     margin-bottom: 4%;
-    width: 40%;
     position: relative;
-    font-size: 30px;
+    width: 100%;
+    font-size: 2.75vw;
     font-family: VT323;
     border-right: 2px solid;
     white-space: nowrap;
     overflow: hidden;
     color: rgb(128, 255, 0);
-    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;
-    animation: 
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px greenyellow, 0 0 20px greenyellow;    animation: 
         typing 8s steps(57),
-        cursor .4s step-end infinite alternate;
+        cursor .4s step-end infinite alternate;  
 }
-
-/* .static::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid greenyellow;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    background: rgb(0, 32, 0);
-    animation: typing 15.5s steps(56) infinite;
-} */
 
 @keyframes cursor {
     50% { border-color: transparent; }  

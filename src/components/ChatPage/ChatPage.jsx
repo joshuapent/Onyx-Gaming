@@ -4,6 +4,7 @@ import { aChat } from "../../utilities/chat-api";
 import { getUser } from "../../utilities/users-api";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SendIcon from '@mui/icons-material/Send';
+import { findMessages, newMessage } from "../../utilities/messages-api";
 
 function ChatPage({ user, handleChat, chatID }) {
   const [input, setInput] = useState("");
@@ -57,13 +58,19 @@ function ChatPage({ user, handleChat, chatID }) {
     };
   }, [chatRoom]);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const data = { msg: input, user: user.name };
-    setMsgs((msgs) => [...msgs, data]);
-    console.log(chatRoom._id);
-    socketRef.current.emit("sendMsg", data, chatRoom._id);
-    setInput("");
+    const data = { msg: input, user: user.gamertag, id: user._id };
+    try {
+      // await newMessage({sender_id: user._id, text: input, chatID: chatRoom._id})
+      setMsgs((msgs) => [...msgs, data]);
+      console.log(chatRoom._id);
+      socketRef.current.emit("sendMsg", data, chatRoom._id);
+      setInput("");
+    }
+    catch (err) {
+      console.log(err)
+    }
   }
 
   function handleChange(e) {
@@ -72,16 +79,19 @@ function ChatPage({ user, handleChat, chatID }) {
   return (
     <div className="ChatPage">
       <div className="chattp">
-        <h1 className="chatwith">Chat with {friend && friend.name}</h1>
+        <h1 className="chatwith">Chat with {friend && friend.gamertag}</h1>
         <button className="exit" onClick={handleChat}><ExitToAppIcon fontSize="large" /><span>Exit Chat</span> </button>
       </div>
       <div className="chat-box">
         <ul className="chat-items">
           {msgs.map((data, idx) => {
             return (
-              <li className={data.user} key={data + idx}>
-                <span>{data.user}:&nbsp;</span>
-                {data.msg}
+              <li className={data.id === user._id ? 'homeClass' : 'guestClass'} key={data + idx}>
+                {data.id === user._id ? 
+                  <p className="user-message" ><span className="user-message-text">{data.msg}</span> {data.user}</p>
+                  :
+                  <p className="user-message" >{data.user} <span className="user-message-text">{data.msg}</span></p>
+                  }
               </li>
             );
           })}

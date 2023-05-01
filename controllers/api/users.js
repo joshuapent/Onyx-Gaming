@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const User = require('../../models/user');
+const Chat = require('../../models/chat');
+const Message = require('../../models/message');
 
 async function checkToken(req, res) {
   console.log('req.user -> ', req.user);
@@ -19,7 +21,7 @@ async function create(req, res) {
 
 async function editBio(req, res) {
   try {
-    await User.findByIdAndUpdate(req.params.id, {bio: req.body})
+    await User.findByIdAndUpdate(req.params.id, req.body)
   } catch (err) {
     res.status(400).json(err);
   }
@@ -27,7 +29,7 @@ async function editBio(req, res) {
 
 async function editRating(req, res) {
   try {
-    await User.findByIdAndUpdate(req.params.id, {rating: req.body})
+    await User.findByIdAndUpdate(req.params.id, req.body)
   } catch (err) {
     res.status(400).json(err);
   }
@@ -35,8 +37,11 @@ async function editRating(req, res) {
 
 async function remove(req, res) {
   try {
-    await User.findByIdAndDelete(req.body)
-    localStorage.removeItem('token');
+    await User.findByIdAndDelete(req.body.id)
+    await Chat.deleteMany({users: req.body.id})
+    await Message.deleteMany({sender_id: req.body.id})
+    await findand
+
   } catch (err) {
     res.status(400).json(err);
   }
