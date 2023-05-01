@@ -35,8 +35,7 @@ async function editRating(req, res) {
 
 async function remove(req, res) {
   try {
-    await User.findByIdAndDelete(req.body)
-    localStorage.removeItem('token');
+    await User.findByIdAndDelete(req.body.id)
   } catch (err) {
     res.status(400).json(err);
   }
