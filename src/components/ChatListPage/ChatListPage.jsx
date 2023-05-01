@@ -8,12 +8,12 @@
                         <div className="chat-users">
                             {chat.users.map((usermap, idx) => {
                                 if (usermap._id !== user._id) return (
-                                    <h5 key={usermap + idx}>Chat with: {usermap.gamertag}</h5>
+                                    <h3 key={usermap + idx}>{usermap.gamertag}</h3>
                                 )
                             })
                             }
                         </div>
-                        <button className="chat-users-open" onClick={() => handleChat(chat._id)}>Open</button>
+                        <button className="chat-users-open" onClick={() => handleChat(chat._id)}>Chat</button>
                     </div>
                 )
             })

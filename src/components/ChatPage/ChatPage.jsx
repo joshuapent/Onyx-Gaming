@@ -89,8 +89,11 @@ function ChatPage({ user, handleChat, chatID }) {
           {msgs.map((data, idx) => {
             return (
               <li className={data.id === user._id ? 'homeClass' : 'guestClass'} key={data + idx}>
-                <span>{data.user}:&nbsp;</span>
-                {data.msg}
+                {data.id === user._id ? 
+                  <p className="user-message" ><span className="user-message-text">{data.msg}</span> {data.user}</p>
+                  :
+                  <p className="user-message" >{data.user} <span className="user-message-text">{data.msg}</span></p>
+                  }
               </li>
             );
           })}

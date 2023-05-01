@@ -9,13 +9,11 @@
     align-content: center;
     justify-content: center;
     font-family: 'Black Ops One';
-    font-size: 50px;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    width:500px;
+    font-size: 4em;
+}
+
+.connections-link:hover {
+    color: rgb(219, 250, 255);
 }
 
 .connections > h1 {
@@ -46,13 +44,48 @@
     width: auto;
 }
 
-.chat-box > ul > li {
-    list-style: none;
-    display: flex;
-}
-
 .chat-box > ul {
     padding-left: 1em;
+    min-height: 40vh;
+}
+
+.homeClass {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 5px;
+}
+
+.guestClass {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+
+.user-message {
+    margin: 0;
+    color: white;
+}
+
+.guestClass > .user-message > span {
+    padding: 2px 4px;
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    background: rgb(55, 181, 223);
+}
+
+.homeClass > .user-message > span {
+    padding: 2px 4px;
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    background: rgb(164, 162, 164);
+}
+
+.chat-items li {
+    max-width: 100%;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 5px;
 }
 
 section{
@@ -167,7 +200,7 @@ section .row:nth-child(even) div:nth-child(2) {
    text-shadow: 0 0 120px rgb(98, 0, 255);    
 }
 
-.chat-users{
+/* .chat-users{
 
     color: white;
     margin-top: 15%;
@@ -178,15 +211,12 @@ section .row:nth-child(even) div:nth-child(2) {
     right: 0;
     width:200px;
     background: rgb(1, 1, 1);
-    /* border-top: 3px solid aqua;
-    border-left: 3px solid aqua;
-    border-right: 3px solid aqua; */
 }
 
 .chat-users:before,
 .chat-users:after {
     content: '';
-    position: absolute;
+    position: absolute; 
     left: -3px;
     top: -5px;
     border-radius: 10px;
@@ -197,8 +227,8 @@ section .row:nth-child(even) div:nth-child(2) {
     z-index: -2;
     animation: motion 20s linear infinite;
 }
-
-.chat-users-open{
+*/
+/* .chat-users-open{
     color: white;
     margin-top: 40%;
     position: absolute;
@@ -223,9 +253,9 @@ section .row:nth-child(even) div:nth-child(2) {
     height: calc(100% + 11px);
     z-index: -2;
     animation: motion 20s linear infinite;
-}
+} */
 
-.individual-chat{
+/* .individual-chat{
     position: absolute;
     width:500px;
     margin-left: auto;
@@ -233,9 +263,24 @@ section .row:nth-child(even) div:nth-child(2) {
     left: 0;
     right: 0;
     text-align: center;
+} */
+
+.individual-chat{ 
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding-right: 6em;
+    padding-left: 6em;
 }
 
-.ChatPage{
+.individual-chat:before,
+.individual-chat:after {
+    background: linear-gradient(45deg,rgb(98, 0, 255),aqua,aqua,rgb(98, 0, 255),rgb(98, 0, 255));
+    animation: motion 20s linear infinite;
+}
+
+.ChatPage,
+.user-chat {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -249,7 +294,9 @@ section .row:nth-child(even) div:nth-child(2) {
 }
 
 .ChatPage:before,
-.ChatPage:after {
+.ChatPage:after,
+.user-chat:before,
+.user-chat:after {
     content: '';
     position: absolute;
     left: -3px;
@@ -282,7 +329,8 @@ section .row:nth-child(even) div:nth-child(2) {
 .msgbx{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 10px;
     background: linear-gradient(268.91deg,rgb(1, 115, 115) 0%,rgb(65, 175, 175) 20%, rgb(76, 171, 171) 50%, rgb(10, 122, 122) 100%);
     margin-left: auto;
     margin-right: auto;
@@ -295,8 +343,13 @@ section .row:nth-child(even) div:nth-child(2) {
     border-bottom-right-radius: 20px;
 }
 
+.msgbx > [type=text] {
+    width: 80%;
+}
+
 .chatwith{
-    margin-top: -0%;
+    /* background: rgb(0, 125, 125); */
+    display: flex;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     height: 10%;
@@ -323,15 +376,7 @@ section .row:nth-child(even) div:nth-child(2) {
 .sendbtn{
     display: flex;
     align-items: center;
-}
-
-.chat-items li {
-    color: rgb(0, 0, 0);
-    background: rgb(164, 162, 164);
-    max-width: fit-content;
-    border-radius: 3px;
-    margin-top: 7px;
-    padding: 5px;
+    width: 20%;
 }
 
 .inviteh1{
@@ -341,9 +386,15 @@ section .row:nth-child(even) div:nth-child(2) {
 
 .inviteul{
     color: white;
+    min-height: 40vh;
 }
 
-.invitebtn{
+.chat-users-open {
+    margin-left: auto;
+}
+
+.invitebtn,
+.chat-users-open {
     color: white;
     display: flex;
     align-items: center;
@@ -351,7 +402,8 @@ section .row:nth-child(even) div:nth-child(2) {
     border-radius: 15px;
 }
 
-.invitebtn:hover {
+.invitebtn:hover,
+.chat-users-open:hover {
     background: #45f3ff;
     color: black;
     border-radius: 15px;
