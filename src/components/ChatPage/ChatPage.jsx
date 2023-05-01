@@ -59,8 +59,6 @@ function ChatPage({ user, handleChat, chatID }) {
   }, [chatRoom]);
 
   async function handleSubmit(e) {
-    console.log('hi')
-    console.log(chatRoom._id)
     e.preventDefault();
     const data = { msg: input, user: user.gamertag, id: user._id };
     try {

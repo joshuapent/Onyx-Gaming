@@ -37,9 +37,9 @@ function Account({ user, setUser}) {
   async function submitBio(evt) {
     evt.preventDefault();
     const bio = {bio: text};
-    console.log(bio, user._id)
     setText('');
     try {
+      setUser((oldUser) => ({...oldUser, bio: text}))
       await updateBio(user._id, bio)
     } catch (err) {
       console.log(err)
@@ -49,6 +49,7 @@ function Account({ user, setUser}) {
   async function submitKD(e) {
     e.preventDefault()
     const KD = {rating: num};
+    setUser((oldUser) => ({...oldUser, rating: num}))
     setNum('');
     try {
       await updateRating(user._id, KD)
