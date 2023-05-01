@@ -48,17 +48,17 @@ function ConnectCard({users, handleIdxChange, idx, user}) {
                     <p>This user has not yet set up a bio</p>
                 }           </div>
                 <div className="connect-card-footer">
-                <div className="stats">
-                {userView && userView.games ? 
-                    <h3>Games: {userView.games}</h3> : 
-                    <h3>Games: N/A</h3>
-                }   
-                &nbsp; <h3>|</h3> &nbsp; 
-                {userView && userView.rating ?
-                    <h3>Rating: {userView && userView.rating}</h3> :
-                    <h3>Rating: N/A</h3>
-                }
-                </div>
+                    <div className="stats">
+                    {userView && userView.games[1] ? 
+                        <h3>Favorite Game: {userView.games[1].name}</h3> : 
+                        <h3>Favorite Game: N/A</h3>
+                    }   
+                    &nbsp; <h3>|</h3> &nbsp; 
+                    {userView && userView.rating ?
+                        <h3>K/D: {userView && userView.rating}</h3> :
+                        <h3>K/D: N/A</h3>
+                    }
+                    </div>
                 <div className="choice">
                 <button className="ex" onClick={handleIdxChange}><NotInterestedIcon color="error" fontSize="large"/>
                 <br /><span className="connecttxt">Not Interested</span></button>
