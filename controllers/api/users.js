@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const User = require('../../models/user');
+const Chat = require('../../models/chat');
+const Message = require('../../models/message');
 
 async function checkToken(req, res) {
   console.log('req.user -> ', req.user);
@@ -36,6 +38,10 @@ async function editRating(req, res) {
 async function remove(req, res) {
   try {
     await User.findByIdAndDelete(req.body.id)
+    await Chat.deleteMany({users: req.body.id})
+    await Message.deleteMany({sender_id: req.body.id})
+    await findand
+
   } catch (err) {
     res.status(400).json(err);
   }

@@ -80,7 +80,7 @@ function Account({ user, setUser}) {
           </form>
           <form onSubmit={submitKD} className="kd-form">
             <label htmlFor="K/D">What's Your K/D</label>
-            <input type="number" name="K/D" placeholder={user.rating} value={num} onChange={handleKd}/>
+            <input type="number" step=".01" name="K/D" placeholder={user.rating} value={num} onChange={handleKd}/>
             <button type="Submit" className="update-profile-btn">Update</button>
           </form>
           {!deleteForm ? 
