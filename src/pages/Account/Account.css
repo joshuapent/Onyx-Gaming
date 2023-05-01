@@ -38,12 +38,19 @@
     text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
 }
 
+.account-delete:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow, 0 0 50px greenyellow, 0 0 100px greenyellow;
+}
+
 .bio-form > input {
     max-width: 80%;
 }
 
 .kd-form > input {
     max-width: 5em;
+    padding-left: 0.7em;
 }
 
 #scan{
