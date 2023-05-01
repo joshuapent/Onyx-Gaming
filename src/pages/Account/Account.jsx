@@ -74,24 +74,24 @@ function Account({ user, setUser}) {
         <div className="staticParent"><div className="static">Update your Account information here!</div></div>
         <div className="profile-details">
           <form onSubmit={submitBio} className="bio-form">
-            <label htmlFor="Bio">Tell us about you!</label>
+            <p>Tell us about you!</p>
             <input type="text" name="Bio" onChange={handleBio} value={text} placeholder={user.bio}/>
             <button type="Submit" className="update-profile-btn">Update</button>
           </form>
           <form onSubmit={submitKD} className="kd-form">
-            <label htmlFor="K/D">What's Your K/D</label>
+            <p>What's Your K/D</p>
             <input type="number" step=".01" name="K/D" placeholder={user.rating} value={num} onChange={handleKd}/>
             <button type="Submit" className="update-profile-btn">Update</button>
           </form>
           {!deleteForm ? 
             <div>
-              <button onClick={toggleDeleteForm}>Delete Account</button>
+              <button className="account-delete" onClick={toggleDeleteForm}>Delete Account</button>
             </div>
             :
             <div>
               <label htmlFor="deleteformbutton">Are you sure you want to delete your account?</label>
-              <button name="deleteformbutton" onClick={removeMyAccount}>Yes!</button>
-              <button name="changedmymind" onClick={toggleDeleteForm}>No I've changed my mind</button>
+              <button className="account-delete" name="deleteformbutton" onClick={removeMyAccount}>Yes!</button>
+              <button className="account-delete" name="changedmymind" onClick={toggleDeleteForm}>No I've changed my mind</button>
             </div>
           }
         </div>

@@ -32,7 +32,17 @@
     border: 1px solid black;
 }
 
+.account-delete {
+    margin-top: 3em;
+    color: rgb(119, 236, 2);
+    text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 10px rgb(138, 230, 1), 0 0 20px greenyellow;
+}
+
 .bio-form {
+}
+
+.bio-form > input {
+    max-width: 80%;
 }
 
 .kd-form {
