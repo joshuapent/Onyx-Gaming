@@ -31,7 +31,7 @@ button, a.button {
 .box{
   position: relative;
   width: 480px;
-  height: 300px;
+  height: 400px;
   background: rgba(0, 0, 0, 0.511);
   border-radius: 8px;
   overflow: hidden;
@@ -52,7 +52,7 @@ button, a.button {
   top: -50%;
   left: -50%;
   width: 480px;
-  height: 300px;
+  height: 400px;
   background: linear-gradient(0deg, transparent,#45f3ff5e ,#45f3ff5e);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -76,7 +76,7 @@ button, a.button {
   top: -50%;
   left: -50%;
   width: 480px;
-  height: 300px;
+  height: 400px;
   background: linear-gradient(0deg, transparent,#45f3ff5e ,#45f3ff5e);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -284,3 +284,23 @@ video {
   text-shadow: 0 0 12px purple, 0 0 50px purple, 0 0 100px purple;
 }
 
+.error-message {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.no-account {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.no-account-msg {
+  color:#45f3ff;
+}
+
+.no-account-btn {
+  color: white;
+  cursor: pointer;
+}

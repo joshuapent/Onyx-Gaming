@@ -22,8 +22,10 @@ export default function LoginForm({ setUser }) {
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
-    } catch {
-      setError('Log In Failed - Try Again');
+      if (credentials.email === '') setError('Log In Failed - Try Again');
+    } catch (err) {
+      console.log(err)
+      setError('Your email and password did not match - Try Again');
     }
   }
 
@@ -40,8 +42,12 @@ export default function LoginForm({ setUser }) {
           <input className='authinputpw' type="password" name="password" value={credentials.password} onChange={handleChange} required />
           <button className='signin' type="submit">LOGIN</button>
         </form>
+        <div className="no-account">
+        <p className='no-account-msg'>Don't have an account?</p>
+        <button className='no-account-btn'>SIGN UP!</button>
+        </div>
+        <p className="error-message">&nbsp;{error}</p>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }
