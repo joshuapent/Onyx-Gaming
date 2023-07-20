@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm({ setUser, setAuthState }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -11,6 +11,10 @@ export default function LoginForm({ setUser }) {
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
     setError('');
+  }
+
+  function handleSwap(evt) {
+    setAuthState(false)
   }
 
   async function handleSubmit(evt) {
@@ -44,7 +48,7 @@ export default function LoginForm({ setUser }) {
         </form>
         <div className="no-account">
         <p className='no-account-msg'>Don't have an account?</p>
-        <button className='no-account-btn'>SIGN UP!</button>
+        <button onClick={handleSwap} className='no-account-btn'>SIGN UP!</button>
         </div>
         <p className="error-message">&nbsp;{error}</p>
       </div>
