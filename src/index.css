@@ -40,7 +40,7 @@ button, a.button {
 .box1{
   position: relative;
   width: 480px;
-  height: 520px;
+  height: 575px;
   background: rgba(0, 0, 0, 0.511);
   border-radius: 8px;
   overflow: hidden;
@@ -298,6 +298,7 @@ video {
 
 .no-account-msg {
   color:#45f3ff;
+  align-self: center;
 }
 
 .no-account-btn {
