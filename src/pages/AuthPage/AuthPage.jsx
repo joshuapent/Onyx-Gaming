@@ -1,10 +1,14 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import flo from '../../assets/flo.mp4'
+import { useState } from 'react';
 
 
 
 export default function AuthPage({setUser}) {
+
+  const [authState, setAuthState] = useState(true)
+
   return (
     <main className='auth'>
       <video className='videobg' src={flo} autoPlay loop muted />
@@ -21,12 +25,13 @@ export default function AuthPage({setUser}) {
         <span>N</span>
         <span>G</span>
       </div>
-      <div>
-      <SignUpForm setUser={setUser}/>
+
+      {authState ? <div>
+      <LoginForm setUser={setUser} setAuthState={setAuthState}/>
       </div>
-      <div className='loginbx'>
-      <LoginForm setUser={setUser}/>
-      </div>
+      : <div className='loginbx'>
+      <SignUpForm setUser={setUser} setAuthState={setAuthState}/>
+      </div>}
       </div>
     </main>
   );

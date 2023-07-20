@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm({ setUser, setAuthState }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -13,6 +13,10 @@ export default function LoginForm({ setUser }) {
     setError('');
   }
 
+  function handleSwap(evt) {
+    setAuthState(false)
+  }
+
   async function handleSubmit(evt) {
     // Prevent form from being submitted to the server
     evt.preventDefault();
@@ -22,8 +26,10 @@ export default function LoginForm({ setUser }) {
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       setUser(user);
-    } catch {
-      setError('Log In Failed - Try Again');
+      if (credentials.email === '') setError('Log In Failed - Try Again');
+    } catch (err) {
+      console.log(err)
+      setError('Your email and password did not match - Try Again');
     }
   }
 
@@ -40,8 +46,12 @@ export default function LoginForm({ setUser }) {
           <input className='authinputpw' type="password" name="password" value={credentials.password} onChange={handleChange} required />
           <button className='signin' type="submit">LOGIN</button>
         </form>
+        <div className="no-account">
+        <p className='no-account-msg'>Don't have an account?</p>
+        <button onClick={handleSwap} className='no-account-btn'>SIGN UP!</button>
+        </div>
+        <p className="error-message">&nbsp;{error}</p>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }

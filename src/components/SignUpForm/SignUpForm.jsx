@@ -18,6 +18,11 @@ export default class SignUpForm extends Component {
     });
   };
 
+  handleSwap = (evt) => {
+    this.props.setAuthState(true)
+  }
+
+
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
@@ -64,6 +69,10 @@ export default class SignUpForm extends Component {
             <input className='authinputpw' type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
             <button className='signup' type="submit" disabled={disable}>SIGN UP</button>
           </form>
+          <div className="no-account">
+            <p className='no-account-msg'>Already have an account?</p>
+            <button onClick={this.handleSwap} className='no-account-btn'>LOGIN!</button>
+          </div>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
       </div>

@@ -27,6 +27,8 @@ const server = app.listen(port, function() {
   console.log(`Express app running on port ${port}`);
 });
 
+// app.listen(process.env.PORT || 3000);
+
 const io = require('./config/socket').init(server);
 
 io.on('connection', (socket) => {

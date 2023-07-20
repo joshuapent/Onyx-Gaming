@@ -15,7 +15,7 @@ export default function NavBar({ user, setUser }) {
         <li className="navLi"><Link style={{color:"white"}} to="/">Home</Link></li>
         <li className="navLi"><Link style={{color:"white"}} to="/connect">Connect</Link></li>
         <li className="navLi"><Link style={{color:"white"}} to="/connections">Connections</Link></li>
-        <li className="navLi"><Link style={{color:"white"}} to="/account">{user && user.name}</Link></li>
+        <li className="navLi"><Link style={{color:"white"}} to="/account">{user && user.gamertag}</Link></li>
       </ul>
         <h3><Link style={{color:"white"}} to="" onClick={handleLogout}>Log Out</Link></h3>
     </nav>
